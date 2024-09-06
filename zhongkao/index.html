@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中考倒计时</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://api.dujin.org/pic/fengjing'); /* 请将此URL替换为实际的图片URL */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .countdown {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 30px; /* 此为边框圆润度 */
+            padding: 120px; /* 此为时间框大小 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+            display: flex;
+            flex-direction: row;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        p {
+            font-size: 32px; /* 此为文字大小 */
+            margin: 0;
+            color: #666;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @media (max-width: 768px) {
+            .countdown {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>	
+</head>
+<body>
+    <div class="countdown">
+        <p>距离中考仅剩</p>
+        <p id="days">0天</p>
+        <p id="hours">0小时</p>
+        <p id="minutes">0分钟</p>
+        <p id="seconds">0秒</p>
+    </div>
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const examDate = new Date('2025-06-22T09:00:00'); // 请将此日期设置为实际的中考日期
+            const diff = examDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days + '天';
+            document.getElementById('hours').innerText = hours + '小时';
+            document.getElementById('minutes').innerText = minutes + '分钟';
+            document.getElementById('seconds').innerText = seconds + '秒';
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+<script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" skin="player" lr="l" m="1"></script>
+</body>
+</html>

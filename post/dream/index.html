@@ -1,0 +1,3108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<meta http-equiv="content-language"  content="zh-cn" >
+
+<head>
+<meta http-equiv="content-language"  content="zh-cn" >
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="codepark,码园,codepark码园,InformationTechnology,信息技术学习,开发,Gridea,Next,next,js,css,html">
+<meta name="description" content="CodePark，记录菜鸟成长与实用教程。">
+<meta name="theme-color" content="#f8f9fa">
+<title>梦想的力量 | codepark</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1725637457483">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.loli.net/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.staticfile.net/velocity/1.5.0/velocity.min.js"></script>
+<script src="https://cdn.staticfile.net/velocity/1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://gcore.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://gcore.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+  <meta name="description" content="梦想的力量" />
+  <meta name="keywords" content="" />
+<!--网站加载进度条开始-->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/pace.min.js" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+    	background: #006eff; /*进度条颜色*/
+    	height: 3px; /*进度条高度*/
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #3f3f3f, 0 0 5px #3f3f3f; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #00ffdd;	/*上边框颜色*/
+    	border-left-color: #00ffdd;	/*左边框颜色*/
+    }
+</style>
+<!--网站加载进度条结束-->
+
+<!--网站加载动画开始-->
+<style>
+#loading-box .loading-left-bg,
+#loading-box .loading-right-bg {
+  position: fixed;
+  z-index: 10000;
+  width: 50%;
+  height: 100%;
+  background-color: #8EE5EE;
+  transition: all 0.5s;
+}
+
+#loading-box .loading-right-bg {
+  right: 0;
+}
+
+#loading-box>.spinner-box {
+  position: fixed;
+  z-index: 10001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#loading-box .spinner-box .configure-border-1 {
+  position: absolute;
+  padding: 3px;
+  width: 115px;
+  height: 115px;
+  background: #ffab91;
+  animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+
+#loading-box .spinner-box .configure-border-2 {
+  left: -115px;
+  padding: 3px;
+  width: 115px;
+  height: 115px;
+  background: rgb(63, 249, 220);
+  transform: rotate(45deg);
+  animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+}
+
+#loading-box .spinner-box .loading-word {
+  position: absolute;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+#loading-box .spinner-box .configure-core {
+  width: 100%;
+  height: 100%;
+  background-color: #53868B;
+}
+
+div.loaded div.loading-left-bg {
+  transform: translate(-100%, 0);
+}
+
+div.loaded div.loading-right-bg {
+  transform: translate(100%, 0);
+}
+
+div.loaded div.spinner-box {
+  display: none !important;
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  25% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(-135deg);
+  }
+
+  75% {
+    transform: rotate(-225deg);
+  }
+
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+</style>
+
+<div id="loading-box">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+      <div class="configure-border-1">
+        <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+        <div class="configure-core"></div>
+      </div>
+      <div class="loading-word">拼命加载中...</div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').classList.add("loaded")
+    })
+</script>
+
+<!--网站加载动画结束-->
+<style type="text/css">
+::-webkit-scrollbar-thumb { /*滚动条滑块*/
+    background-color: #1E90FF; /*滑块颜色*/
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent); /*滑块样式*/
+    border-radius: 5px; /*设置圆角*/
+}
+::-webkit-scrollbar-track { /*滚动条滑槽*/
+    background-color: #FFFACD; /*滑槽颜色*/
+    border-radius: 5px; /*设置圆角*/
+}
+::-webkit-scrollbar { /*滚动条大小*/
+    width: 8px; /*竖向滚动条的宽度*/
+    height: 8px; /*横向滚动条的高度*/
+}
+</style>
+
+
+</script>
+<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+<script>
+  new LingQue.Monitor().init({id:"3IHTQneWiyEQ2HsC",sendSuspicious:true});
+</script>
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>codepark</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">CodePark，记录菜鸟成长与实用教程。</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://copa.us.kg/post/about" target="_self">
+                  <i class="fa fa-user"></i> 关于本站
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives" target="_self">
+                  <i class="fa fa-globe"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags" target="_self">
+                  <i class="fa fa-globe"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://copa.us.kg/zhongkao" target="_self">
+                  <i class="fa fa-globe"></i> 中考倒计时
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_blank">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Hazel</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">你好！我是Hazel，一名专注于探索前端的世界的中学生，欢迎你与我同行，在CodePark上，一起感受技术的韵律，探寻知识的海洋。长风破浪会有时，直挂云帆济沧海。让我们携手，并肩前行，在平凡中发现不凡的力量。</p>
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">36</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">15</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://copa.us.kg/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/xuhaozhao123">
+              <i class="fa fa-github-alt" title="github"></i>
+            </a>
+          
+            <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=2102504156&amp;site=qq&amp;menu=yes&amp;from=message&amp;isappinstalled=0&#34;&#34;&gt;我的QQ&lt;/a&gt;">
+              <i class="fa fa-qq" title="QQ"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="/media/js/magic/clock.js"></script>
+  </div>
+
+</div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    jQuery.Velocity(hideElement, 'stop');
+    jQuery.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        jQuery.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <div class="post-body">
+  
+  
+</div>
+			<section class="post-header">
+  <h2 class="post-title">
+    <a class="post-title-link" href="https://copa.us.kg/post/dream/"> 梦想的力量 </a>
+  </h2>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2024-08-03 17:43:42">2024-08-03</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >3<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >700<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+      
+    
+  </div>
+</section>
+
+            <div class="post-body next-md-body" id="post_body">
+              <p>梦想如同一粒种子，尽管微不足道，却蕴含着惊人的力量。在人生的旅途中，我们常常被挫折和困难所困扰，感到迷茫和无助。然而，只要我们坚定心中的梦想，不断追求并坚持不懈，那么梦想的力量将会引领我们前行，让我们看到希望的曙光。</p>
+<!-- more -->
+<p>梦想的力量是推动我们前进的动力。当我们面临困难和挫折时，是梦想让我们坚持不懈地追求下去。梦想让我们相信，即使前路崎岖不平，也一定能够克服困难，实现自己的目标。正如一只丑小鸭，虽然身处逆境，但它内心有着变成天鹅的梦想，因此不断努力，最终实现了自己的目标。这是梦想的力量所赋予的勇气和信念。</p>
+<p>梦想的力量可以激发我们的潜能。每个人都有无限的潜能，而梦想则是激发这些潜能的催化剂。当我们为了实现梦想而努力奋斗时，会不断地挑战自己，突破自己的极限。正如一星火种，虽然微小却能燃烧整个草原，这是梦想的力量在激发我们的潜能，让我们不断超越自己，实现自己的价值。</p>
+<p>梦想的力量可以温暖我们的心灵。当我们感到疲惫和失落时，是梦想让我们重新找回信心和勇气。梦想让我们相信，即使身处黑暗之中，也一定能够找到光明。一帘细雨能够平息狂风，一抹微笑能够融化冰雪，同样地，梦想的力量也能够温暖我们的心灵，让我们在困境中重燃希望的火花。</p>
+<p>梦想的力量需要我们不断地积累和坚持。正如一条细小的溪流能够汇成浩瀚的江河，一滴弱小的水滴能够穿透坚硬的岩石，一只蚂蚁也能够冲破火墙的包围，这是日积月累、锲而不舍的力量。梦想的力量也需要我们具备这种持之以恒的精神。只有不断地追求和坚持，才能让梦想的力量在我们的生命中发挥出巨大的作用。</p>
+<p>总之，梦想的力量是无穷的。它能够激励我们不断前进，激发我们的潜能，温暖我们的心灵。只要我们坚定自己的梦想并坚持不懈地追求，那么这种力量将会引领我们走向成功的道路。让我们保持对梦想的信仰和追求，让梦想的力量引领我们走向更加美好的未来！</p>
+
+            </div>
+  <div>
+  <br/> 
+    <div style="text-align:center;color: #999;font-size:14px;">---------- 本文到此结束 <i class="fa fa-paw"></i> 感谢您的阅读 ----------</div>
+  <br/>
+  </div>          
+			
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      Hazel
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+	  <a href="https://copa.us.kg/post/dream/" title="梦想的力量">https://copa.us.kg/post/dream/</a>  
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <br/><!-- 引入依赖 -->
+<link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+<!-- 只要一个div的class是social-share即可，内容会自动初始化 -->
+<div class="social-share" style="text-align:center;font-size:14px;" data-sites="facebook,twitter,linkedin,google,wechat,qq,qzone,weibo">分享到：</div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="小白云—云服务推荐" href="https://copa.us.kg/post/OuyurPkOg/">小白云—云服务推荐</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="小白云—云服务推荐" href="https://copa.us.kg/post/OuyurPkOg/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="web开发之创造无障碍网页" href="https://copa.us.kg/post/webkaifawza/">web开发之创造无障碍网页</a>
+        <a class="nav-mobile-next" title="web开发之创造无障碍网页" href="https://copa.us.kg/post/webkaifawza/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            <script src="https://utteranc.es/client.js"
+        repo="xuhaozhao123/xuhaozhao123.github.io"
+		label="comment"
+        issue-term="pathname"
+        theme="github-light"  
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center id="runTimeBox">
+      网站已安全运行： <span id="run_time"></span>
+    </center>
+    <i class="fa fa-eye"></i><span id="busuanzi_container_site_pv">总访问量： <span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <i class="fa fa-users"></i><span id="busuanzi_container_site_uv">总访客数： <span id="busuanzi_value_site_uv"></span> 人</span>
+    <script>
+  BirthDay = new Date('2024/3/30');
+  if (BirthDay.getTime()) {
+    function runTime() {
+      str = "";
+      today = new Date();
+      timeold = today.getTime() - BirthDay.getTime();
+      sectimeold = timeold / 1000
+      secondsold = Math.floor(sectimeold);
+      msPerDay = 24 * 60 * 60 * 1000
+      msPerYear = 365 * 24 * 60 * 60 * 1000
+      e_daysold = timeold / msPerDay % 365
+      e_yearsold = timeold / msPerYear
+      daysold = Math.floor(e_daysold);
+      yearsold = Math.floor(e_yearsold);
+      str = yearsold + " 年 ";
+      str += daysold + " 天 ";
+      str += today.getHours() + " 时 ";
+      str += today.getMinutes() + " 分 ";
+      str += today.getSeconds() + " 秒";
+      return str;
+    }
+    setInterval(function () {
+      $("#run_time").html(runTime());
+    }, 1000);
+  } else {
+    document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+  }
+</script>
+    <div class="poweredby">
+      Powered by <a href="https://copa.us.kg" target="_blank">CodePark</a>
+<br>
+热烈庆祝中国共产党成立103周年！
+<br>
+本站严格遵守中国法律，坚持中国共产党领导。
+<br>
+<a href="https://icp.gov.moe/?keyword=20242756" target="_blank">萌ICP备20242756号</a>
+<br>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<div id="poem_sentence"></div>
+<div id="poem_info"></div>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+</script>
+    </div>
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+          
+            
+              <div class="bg-img">
+                <img src="https://api.dujin.org/pic/fengjing" />
+              </div>
+              
+                
+                  
+                        
+                          
+  <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo"  skin="player" lr="l"  m="1"></script>
+
+
+                            
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "true";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "感谢访问，期待您的回归！";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip"> </p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        jQuery.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        jQuery.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        jQuery.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        jQuery.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      jQuery.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      jQuery.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
+  </div>
+<!-- 复制弹窗提示开始 -->
+<script src="https://npm.elemecdn.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  window.onload = function(){
+    document.body.oncopy = function() {
+      swal({
+        title: "复制成功！",
+        text: "若要转载请务必保留原文链接并注明来源，谢谢合作！",
+        icon: "success",
+        buttons: false,
+        closeOnClickOutside: false,
+        timer: 1000,
+     });
+    };
+  }
+</script>
+<!-- 复制弹窗提示结束 -->
+<!--夜间模式开始-->
+
+<style>
+.set-view-mode { /*正常模式下按钮总体样式*/
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 300;
+    background: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 10px;
+    color: #FFFFFF;
+    opacity: .8;
+    text-align: center;
+}
+.set-view-mode i { /*正常模式下按钮图标样式*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.cover{ /*正常模式下遮罩样式（应设置为全透明）*/
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    outline:5000px solid rgba(0, 0, 0, 0);
+    z-index: 99999;
+}
+.night-mode .set-view-mode { /*夜间模式下按钮总体样式*/
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 300;
+    background: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 10px;
+    color: #000000;
+    opacity: .8;
+    text-align: center;
+}
+.night-mode .set-view-mode i { /*夜间模式下按钮图标样式*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+    color: #000000;
+}
+.night-mode .cover{ /*夜间模式下遮罩样式（应设置为黑色半透明）*/
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    outline:5000px solid rgba(0, 0, 0, 0.3); 
+    z-index: 99999;
+}
+</style>
+
+<div class="cover"></div>
+<a class="set-view-mode" href="javascript:void(0)" title="夜间模式">
+    <i class="fa fa-moon-o"></i>
+</a>
+
+<script>
+$(function(){
+    btn = $('.set-view-mode');
+    if(sessionStorage.mode=="night"){
+        $('body').addClass('night-mode');
+        btn.find('i').attr('class','fa fa-sun-o');
+    }
+    $('.set-view-mode').click(function(){
+        var next_mode = $('body').hasClass('night-mode') ? 'day':'night';
+        if(next_mode!='day'){
+            $('body').addClass('night-mode');
+            btn.find('i').attr('class','fa fa-sun-o');
+            sessionStorage.mode="night";
+        }else{
+            $('body').removeClass('night-mode');
+            btn.find('i').attr('class','fa fa-moon-o');
+            sessionStorage.mode="day";
+        }
+    });
+});
+</script>
+
+<!--夜间模式结束-->
+<!--鼠标右键菜单开始-->
+<style>
+.usercm a {
+  text-decoration: none;
+}
+div.usercm{
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  background-color:#fff;
+  font-size:13px!important;
+  width:130px;
+  -moz-box-shadow:1px 1px 3px rgba(0,0,0,.3);
+  box-shadow:0px 0px 15px #333;
+  position:absolute;
+  display:none;
+  z-index:10000;
+  opacity:0.9;
+  border-radius: 5px;
+}
+div.usercm ul{
+  list-style-type:none;
+  list-style-position:outside;
+  margin:0px;padding:0px;
+  display:block
+}
+div.usercm ul li{
+  margin:0px;padding:0px;line-height:35px;
+}
+div.usercm ul li a{
+  color:#666;padding:0 15px;display:block
+}
+div.usercm ul li a:hover{
+  color:#fff;background:#73c9e5;border-radius: 5px
+}
+div.usercm ul li a i{
+  margin-right:10px
+}
+.usercm a.disabled{
+  color:#c8c8c8!important;cursor:not-allowed
+}
+.usercm a.disabled:hover{
+  background-color:rgba(255,11,11,0)!important
+}
+div.usercm{
+  background:#fff !important;
+}
+</style>
+
+<script>
+//绑定页面相关事件
+(function(a) {
+  a.extend({
+    mouseMoveShow: function(b) {
+      var d = 0,
+              c = 0,
+              h = 0,
+              k = 0,
+              e = 0,
+              f = 0;
+      a(window).mousemove(function(g) {
+        d = a(window).width();
+        c = a(window).height();
+        h = g.clientX;
+        k = g.clientY;
+        e = g.pageX;
+        f = g.pageY;
+        h + a(b).width() >= d && (e = e - a(b).width() - 5);
+        k + a(b).height() >= c && (f = f - a(b).height() - 5);
+        a("html").on({
+          contextmenu: function(c) {
+            3 == c.which && a(b).css({
+              left: e,
+              top: f
+            }).show()
+          },
+          click: function() {
+            a(b).hide()
+          }
+        })
+      })
+    },
+    //禁用右键菜单
+    disabledContextMenu: function() {
+      window.oncontextmenu = function() {
+        return !1
+      }
+    }
+  })
+})(jQuery);
+
+function getSelect() {
+  "" == (window.getSelection ? window.getSelection() : document.selection.createRange().text) ? layer.msg("请选择需要复制的内容！") : document.execCommand("Copy")
+}
+function GoogleSearch() {
+  var a = window.getSelection ? window.getSelection() : document.selection.createRange().text;
+  "" == a ? layer.msg("请选择需要搜索的内容！") : window.open("https://www.google.com/search?q=" + a)
+}
+function BingSearch() {
+  var a = window.getSelection ? window.getSelection() : document.selection.createRange().text;
+  "" == a ? layer.msg("请选择需要搜索的内容！") : window.open("https://www.bing.com/search?q=" + a)
+}
+function BaiduSearch() {
+  var a = window.getSelection ? window.getSelection() : document.selection.createRange().text;
+  "" == a ? layer.msg("请选择需要搜索的内容！") : window.open("https://www.baidu.com/s?wd=" + a)
+}
+function toRefresh(){
+  window.location.reload()
+}
+$(function() {
+  for (var a = navigator.userAgent, b = "Android;iPhone;SymbianOS;Windows Phone;iPad;iPod".split(";"), d = !0, c = 0; c < b.length; c++) if (0 < a.indexOf(b[c])) {
+    d = !1;
+    break
+  }
+  d && ($.mouseMoveShow(".usercm"), $.disabledContextMenu())
+});
+</script>
+
+<div class="usercm" style="display: none;">
+  <ul>
+    <li style="border-bottom:1px solid gray"><a href="/"><i class="fa fa-home"></i><span>首页</span></a></li>
+
+    <li><a href="javascript:void(0);" onclick="GoogleSearch();"><i class="fa fa-google"></i><span>Google搜索</span></a></li>
+    <li style="border-bottom:1px solid gray"><a href="javascript:void(0);" onclick="BingSearch();"><i class="fa fa-search"></i><span>Bing搜索</span></a></li>
+    <li><a href="javascript:history.go(1);"><i class="fa fa-arrow-right"></i><span>前进</span></a></li>
+    <li><a href="javascript:history.go(-1);"><i class="fa fa-arrow-left"></i><span>后退</span></a></li>
+    <li style="border-bottom:1px solid gray"><a href="javascript:void(0);" onclick="toRefresh()"><i class="fa fa-refresh"></i><span>刷新</span></a></li>
+  </ul>
+</div>
+<!--鼠标右键菜单结束-->
+<!--浏览进度条开始-->
+
+<style>
+    .read_progress {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #eee;
+    }
+    .read_progress_inner {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background-color: #00D3B2;
+    }
+</style>
+
+<div class="read_progress">
+    <div class="read_progress_inner" id="read_progress_inner"></div>
+</div>
+
+<script>
+document.addEventListener('scroll', function(e) {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 已经读过被卷起来的文档部分
+    var scrollHeight = document.documentElement.scrollHeight // 文档总高度
+    var clientHeight = document.documentElement.clientHeight // 窗口可视高度
+    document.getElementById('read_progress_inner').style.width = +(scrollTop/(scrollHeight-clientHeight)).toFixed(2)*100 + '%'
+})
+</script>
+
+<!--浏览进度条结束-->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3I0AF8x2hemcItJE",ck:"3I0AF8x2hemcItJE",autoTrack:true,hashMode:true,screenRecord:true})</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5ff0e536bfef81c3c41d500bac1464fa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/leave/"" data-c="
+          &lt;p&gt;尊敬的访问者：&lt;br&gt;
+您好!&lt;br&gt;
+鉴于本网站即将终止更新，但过往文章将保持一年正常访问，我们特此发出公告。在此，我们向所有支持本站运行的个人、企业以及云服务提供商表示深深的感激之情，并对本站的发展历程进行简要回顾。&lt;br&gt;
+160天前，我开始筹划建设这个网站，在多个静态网站生成器之间进行了慎重选择，最终选定了操作便捷、主题可定制性强的Gridea。同时，我们采用了hsxyhao大佬的Next主题作为本站的主题，并参照Aueiel大佬的部分教程对Next主题的部分结构代码进行了优化修改。我们的源码托管于GitHub，并通过GitHub Page进行部署，利用jsdelivr加速，从而形成了网站的初版“小徐随笔”。&lt;br&gt;
+由于GitHub Page在中国大陆的访问问题，我们在120天前决定将网站迁移至Cloudflare Pages进行部署。经过深思熟虑，我们确定了以信息技术博客为主要发展方向，因此将网站更名为“Code Park”，中文名为“码园”，并采用copa.us.kg作为主要域名，由Cloudflare提供托管加速服务，大大提升了网站的访问速度。&lt;br&gt;
+然而，由于部分人士的滥用行为，pages.dev域名时常受到限制，给访问带来不便。为了向广大访问者提供更好的服务，我们注册了两个新的us.kg域名，分别是codepark和码园，并采用CF分地区解析，境内采用Vercel实现高速访问，境外采用CF实现全球加速，使网站达到了顶峰时期。&lt;br&gt;
+60天前，我们有幸得到了小白云(&amp;quot;https://idc.45fk.cn&amp;quot;)的赞助，为我们提供了计算服务。在此，我们再次向小白云表示衷心的感谢。&lt;br&gt;
+然而，随着学习负担加重与学习压力增大，同时受限于经济问题，网站更新越来越难，由于缺乏独立域名与资金，&lt;img src=&#34;https://copa.us.kg/post-images/1725637454895.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;某度等引擎采取不收录措施。对小站造成接二连三的打击，我权衡再三，决定停止对网站内容的更新。旧内容仍可正常访问。但不会有回复与支持。未来，网站可能迁移至wordpress以获得更高级的功能与更好的管理。&lt;br&gt;
+停止是为了更好的开始，未来codepark将以更好的内容，更优秀的服务，更高的访问速度向各位信息技术爱好者提供更好的帮助。沉舟侧畔千帆过，病树前头万木春。衷心祝福各位开发者与企业以及云服务提供商生活如意，工作顺利，万事如意，再创辉煌，谢谢大家！下面是一些励志语句，愿与大家共勉。&lt;br&gt;
+01、有的时候你会感到绝望，但不放弃是对付困难的最好方法！&lt;br&gt;
+02、千万不要抱有侥幸心理，认为自己的强项一定能弥补自己的弱项，人生什么都会发生，有弱项会使你未战先败。&lt;br&gt;
+03、就是到了最疲惫的时候都不要放弃，否则前功尽弃。&lt;br&gt;
+04、停下休息时，不要忘记别人还在奔跑，学如逆水行舟，不进则退。&lt;br&gt;
+05、着眼于面前，不要沉迷于玩乐，不要处在学习成绩不如人的痛苦之中，进步是由量变到质变的过程，只有足够的量变才会有质变，沉浸在痛苦之中，不会改变什么。&lt;br&gt;
+06、人若没有一段想起来就热泪盈眶的奋斗史，那这一生就算是白活了。&lt;br&gt;
+人生总有这么一段时光，纯粹而简单，疯狂而热烈，拼搏而勇敢，为了理想挑灯夜战，奋笔疾书，若干年后回忆起来，感动了自己，惊艳了时光，温柔了岁月，丰富了记忆，成为人生一笔宝贵的财富，加油吧，少年！&lt;/p&gt;
+">这次——我们真的要离开了</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/OuyurPkOg/"" data-c="
+          &lt;p&gt;在数字化时代，云计算服务日渐成为企业与个人提高效率、实现价值创造的关键工具。小白云(&amp;quot;https://idc.45fk.cn&amp;quot;)作为行业内的领先者，致力于为用户提供安全、高效、可靠的云端服务体验。&lt;/p&gt;
+&lt;p&gt;核心服务优势&lt;/p&gt;
+&lt;p&gt;全面而灵活的服务选项: 小白云提供包括云服务器、挂机宝等多种服务，满足不同规模和需求的客户。无论是初创公司还是大型企业，都能在这里找到合适的解决方案。&lt;/p&gt;
+&lt;p&gt;顶尖的安全保护: 信息安全是云计算用户最关心的问题之一。小白云采用世界先进的数据加密技术及多层防护措施，确保用户数据的安全性和隐私保护，让您安心将数据托管于云端。&lt;/p&gt;
+&lt;p&gt;卓越的性能与可靠性: 通过高效的数据中心和优质的网络架构，小白云保证了服务的高可用性和低延迟。无论您身处何地，都能享受到稳定快速的云端服务体验。&lt;/p&gt;
+&lt;p&gt;全天候技术支持: 小白云提供7*24小时的客户服务与技术支持，无论遇到任何问题，都有专业团队随时准备协助解决，确保您的业务无间断运行。&lt;/p&gt;
+&lt;p&gt;适用场景&lt;/p&gt;
+&lt;p&gt;企业云化: 帮助企业轻松迁移到云端，无需担心硬件限制，根据需求弹性调整资源，助力企业实现数字化转型。&lt;/p&gt;
+&lt;p&gt;网站和应用托管: 适用于各种规模的网站和应用，保证全球范围内的高速访问和数据安全。&lt;/p&gt;
+&lt;p&gt;数据备份与存储: 提供可靠的云存储方案，帮助企业和个人进行数据备份，保障数据不丢失，同时支持高效的数据存取。&lt;/p&gt;
+&lt;p&gt;大数据分析: 支撑大数据处理和分析需求，帮助企业洞察数据价值，优化决策过程。&lt;/p&gt;
+&lt;p&gt;为什么选择小白云？&lt;/p&gt;
+&lt;p&gt;选择小白云，意味着选择了一个全新的效率和稳定性的保障。我们不仅提供标准化的云端服务产品，更注重为客户提供定制化的解决方案，以满足特定需求。我们的愿景是帮助每一个用户，无论是企业还是个人，都能在数字化道路上更加顺畅地前行。&lt;/p&gt;
+&lt;p&gt;立刻加入小白云的用户行列，享受我们为您准备的全方位云端服务，开启您的云端高效工作与生活之旅！&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;随着技术的不断进步和创新，小白云将继续致力于提供更优质、更安全、更高效的云计算服务，助力全球用户实现业务的持续增长和成功。立即访问 小白云官网(https://idc.45fk.cn)，了解更多信息，开启您的专属云端之旅。&lt;/p&gt;
+&lt;p&gt;请注意，本文是推广文章，关于小白云的具体服务内容、优势及活动细节，建议您直接访问其官方网站或与官方代表联系获取最新和最准确的信息。&lt;/p&gt;
+">小白云—云服务推荐</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/dream/"" data-c="
+          &lt;p&gt;梦想如同一粒种子，尽管微不足道，却蕴含着惊人的力量。在人生的旅途中，我们常常被挫折和困难所困扰，感到迷茫和无助。然而，只要我们坚定心中的梦想，不断追求并坚持不懈，那么梦想的力量将会引领我们前行，让我们看到希望的曙光。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;梦想的力量是推动我们前进的动力。当我们面临困难和挫折时，是梦想让我们坚持不懈地追求下去。梦想让我们相信，即使前路崎岖不平，也一定能够克服困难，实现自己的目标。正如一只丑小鸭，虽然身处逆境，但它内心有着变成天鹅的梦想，因此不断努力，最终实现了自己的目标。这是梦想的力量所赋予的勇气和信念。&lt;/p&gt;
+&lt;p&gt;梦想的力量可以激发我们的潜能。每个人都有无限的潜能，而梦想则是激发这些潜能的催化剂。当我们为了实现梦想而努力奋斗时，会不断地挑战自己，突破自己的极限。正如一星火种，虽然微小却能燃烧整个草原，这是梦想的力量在激发我们的潜能，让我们不断超越自己，实现自己的价值。&lt;/p&gt;
+&lt;p&gt;梦想的力量可以温暖我们的心灵。当我们感到疲惫和失落时，是梦想让我们重新找回信心和勇气。梦想让我们相信，即使身处黑暗之中，也一定能够找到光明。一帘细雨能够平息狂风，一抹微笑能够融化冰雪，同样地，梦想的力量也能够温暖我们的心灵，让我们在困境中重燃希望的火花。&lt;/p&gt;
+&lt;p&gt;梦想的力量需要我们不断地积累和坚持。正如一条细小的溪流能够汇成浩瀚的江河，一滴弱小的水滴能够穿透坚硬的岩石，一只蚂蚁也能够冲破火墙的包围，这是日积月累、锲而不舍的力量。梦想的力量也需要我们具备这种持之以恒的精神。只有不断地追求和坚持，才能让梦想的力量在我们的生命中发挥出巨大的作用。&lt;/p&gt;
+&lt;p&gt;总之，梦想的力量是无穷的。它能够激励我们不断前进，激发我们的潜能，温暖我们的心灵。只要我们坚定自己的梦想并坚持不懈地追求，那么这种力量将会引领我们走向成功的道路。让我们保持对梦想的信仰和追求，让梦想的力量引领我们走向更加美好的未来！&lt;/p&gt;
+">梦想的力量</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/webkaifawza/"" data-c="
+          &lt;p&gt;创造无障碍网页是为了确保所有用户，包括有视觉、听觉、运动等障碍的用户，都能顺利访问和使用网站。以下是一些建议和实践方法：&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;语义化HTML&lt;/strong&gt; ：使用语义化的HTML标签（如&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;等），以便屏幕阅读器和其他辅助技术能够更好地理解页面结构。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;无障碍网页示例&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;header&amp;gt;
+        &amp;lt;h1&amp;gt;网站标题&amp;lt;/h1&amp;gt;
+    &amp;lt;/header&amp;gt;
+    &amp;lt;nav&amp;gt;
+        &amp;lt;ul&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;首页&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;关于我们&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;联系我们&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+    &amp;lt;/nav&amp;gt;
+    &amp;lt;main&amp;gt;
+        &amp;lt;article&amp;gt;
+            &amp;lt;h2&amp;gt;文章标题&amp;lt;/h2&amp;gt;
+            &amp;lt;p&amp;gt;文章内容...&amp;lt;/p&amp;gt;
+        &amp;lt;/article&amp;gt;
+    &amp;lt;/main&amp;gt;
+    &amp;lt;footer&amp;gt;
+        &amp;lt;p&amp;gt;版权信息 &amp;amp;copy; 2023&amp;lt;/p&amp;gt;
+    &amp;lt;/footer&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;提供替代文本&lt;/strong&gt; ：为图像、视频和其他非文本内容提供替代文本（alt属性），以便屏幕阅读器可以描述这些内容。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;
+&amp;lt;img src=&amp;quot;example.jpg&amp;quot; alt=&amp;quot;描述图片内容的简短文字&amp;quot;&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;键盘可访问性&lt;/strong&gt; ：确保所有功能都可以通过键盘操作进行访问，例如使用Tab键在表单元素之间导航，以及使用Enter键提交表单。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;颜色对比度&lt;/strong&gt; ：确保文本和背景之间的颜色对比度足够高，以便视力受损的用户能够轻松阅读。可以使用在线工具如WebAIM的Color Contrast Checker来检查颜色对比度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用ARIA角色和属性&lt;/strong&gt; ：为复杂的交互元素添加适当的ARIA角色和属性，以帮助屏幕阅读器理解它们的作用和状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;
+&amp;lt;div role=&amp;quot;navigation&amp;quot; aria-label=&amp;quot;主导航&amp;quot;&amp;gt;
+    &amp;lt;!-- 导航链接 --&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;strong&gt;测试&lt;/strong&gt; ：使用各种辅助技术和浏览器插件（如NVDA、JAWS、VoiceOver等）对您的网站进行测试，以确保它对所有用户都是无障碍的。还可以使用WAVE或axe等工具自动检查网页的可访问性问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;遵循以上建议并持续改进，您将能够创建一个更易于访问的网页，让所有用户都能享受到良好的用户体验。&lt;/p&gt;
+">web开发之创造无障碍网页</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/webkaifa/"" data-c="
+          &lt;p&gt;GitHub 是一个广泛使用的代码托管平台，它不仅提供版本控制的功能，还支持团队协作和项目管理。以下是关于如何使用 GitHub 进行 Web 开发的基本介绍。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一、创建仓库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，访问 GitHub.com 并点击右上角的 &amp;quot;+&amp;quot; 图标，然后选择 &amp;quot;New repository&amp;quot;。为你的仓库命名，选择是否公开以及添加描述和标签后，点击 &amp;quot;Create repository&amp;quot; 完成创建。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二、克隆仓库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在本地计算机上，打开终端并使用以下命令来克隆你刚创建的仓库：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/your-username/your-repository.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这将在你的计算机上创建一个名为 &lt;code&gt;your-repository&lt;/code&gt; 的文件夹，并将仓库内容复制到该文件夹中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三、创建分支&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在进行 Web 开发时，建议为每个功能或修复创建单独的分支。要创建新分支，请执行以下命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd your-repository
+git checkout -b feature-branch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这会创建一个名为 &lt;code&gt;feature-branch&lt;/code&gt; 的新分支，并将其切换为当前工作分支。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;四、提交代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在新分支上进行开发后，使用以下命令将更改添加到暂存区：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后，使用以下命令提交更改：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -m &amp;quot;Your commit message&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;确保提交信息清晰明了，描述了所做的更改。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;五、推送更改&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;要将本地分支的更改推送到远程仓库，请执行以下命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin feature-branch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这将把你的 &lt;code&gt;feature-branch&lt;/code&gt; 分支的更改推送到远程仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;六、合并请求（Pull Request）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当你完成了一个功能或修复并希望将其合并到主分支时，可以创建一个合并请求（Pull Request）。在 GitHub 上，转到你的仓库页面，点击 &amp;quot;Pull requests&amp;quot; 标签，然后点击 &amp;quot;New pull request&amp;quot;。选择你想要合并的分支（例如 &lt;code&gt;feature-branch&lt;/code&gt;），并选择目标分支（通常是 &lt;code&gt;main&lt;/code&gt; 或 &lt;code&gt;master&lt;/code&gt;）。填写详细信息，描述你的更改，然后点击 &amp;quot;Create pull request&amp;quot;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;七、审查和合并&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一旦你创建了合并请求，项目的维护者或其他贡献者可能会对其进行审查。他们可能会提出问题或建议修改。在审查过程中，你可能需要根据反馈进行进一步的更改并更新你的合并请求。一旦所有审查者都满意，他们可以批准合并请求，将你的更改合并到目标分支。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;八、参与开源项目&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;除了在自己的项目中使用 GitHub，你还可以通过参与开源项目来学习和发展你的 Web 开发技能。寻找你感兴趣的项目，复刻它们并在自己的分支上进行更改。完成后，创建一个合并请求以将这些更改贡献给项目。开源项目通常鼓励贡献者遵循良好的编码实践和提交消息规范。&lt;/p&gt;
+">web开发之github的使用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/mtls/"" data-c="
+          &lt;p&gt;原文链接：https://vpetersson.com/2024/05/29/tailscale-and-mutual-tls.html&lt;br&gt;
+A while back, I wrote about how I’m using Tailscale to secure my local service, thanks to Tailscale’s built-in certificates. This greatly improved the security of my local environment. Combined with the rather sophisticated ACL policies, you can lock things down pretty well.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;That gets you pretty far, but I wanted to secure some services that didn’t offer any real authentication (like Gollum), which I use for notes.&lt;br&gt;
+This got me thinking about Mutual TLS (mTLS), which we use pretty heavily at Screenly. Would it be possible to use the certificates from Tailscale for mTLS? As it turns out, yes!&lt;br&gt;
+The first thing we need to do is to generate our client certificate.&lt;br&gt;
+Generating on macOS&lt;br&gt;
+If you installed Tailscale using the App Store on macOS, it does come with the CLI. You just need to do a bit more digging and work around some of the limitations of this and macOS.&lt;br&gt;
+I whipped up a quick helper script that generates the certificate, along with a simple snippet that generates a PKCS#12 bundle, which is what Firefox, for instance, requires for client certificates.&lt;br&gt;
+#!/bin/bash -ex&lt;br&gt;
+TS=&amp;quot;/Applications/Tailscale.app/Contents/MacOS/Tailscale&amp;quot;&lt;/p&gt;
+&lt;h1 id=&#34;return-the-fqdn-from-tailscale-with-some-magic&#34;&gt;Return the FQDN from Tailscale with some magic&lt;/h1&gt;
+&lt;p&gt;FQDN=&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;TS status --json | jq -r &#39;.Self.DNSName&#39; | sed s/.&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;&amp;quot;&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;//g)
+CERT_PATH=&amp;quot;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.32833099999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;HOME/Library/Containers/io.tailscale.ipn.macos/Data&amp;quot;&lt;br&gt;
+echo &amp;quot;Issuing certificates...&amp;quot;&lt;br&gt;
+&amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;&amp;quot;&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;&amp;quot;&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;TS&amp;quot; cert &amp;quot;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;FQDN&amp;quot;&lt;br&gt;
+echo &amp;quot;Generating PKCS#12 bundle...&amp;quot;&lt;br&gt;
+echo &amp;quot;You will need to enter a password here, which you will later use when importing the certificate&amp;quot;&lt;br&gt;
+openssl pkcs12 -export &lt;br&gt;
+-out &amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;CERT_PATH/&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.32833099999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;FQDN.p12&amp;quot; &lt;br&gt;
+-inkey &amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;CERT_PATH/&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.32833099999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;FQDN.key&amp;quot; &lt;br&gt;
+-in &amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;CERT_PATH/&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.32833099999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;FQDN.crt&amp;quot; &lt;br&gt;
+-name &amp;quot;Tailscale cert&amp;quot;&lt;/p&gt;
+&lt;h1 id=&#34;verify-certificate&#34;&gt;Verify certificate&lt;/h1&gt;
+&lt;p&gt;echo &amp;quot;Let&#39;s verify the .p12 file for good measure.&amp;quot;&lt;br&gt;
+openssl pkcs12 -info &lt;br&gt;
+-in &amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;CERT_PATH/&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.32833099999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;FQDN.p12&amp;quot;&lt;br&gt;
+echo &amp;quot;Opening folder...&amp;quot;&lt;br&gt;
+echo &amp;quot;Now you can import this certificate into Firefox.&amp;quot;&lt;br&gt;
+open &amp;quot;&lt;span class=&#39;katex-error&#39; title=&#39;ParseError: KaTeX parse error: Expected &amp;#039;EOF&amp;#039;, got &amp;#039;#&amp;#039; at position 177: …nerate the PKCS#̲12 bundle.tails…&#39;&gt;CERT_PATH&amp;quot;
+If you’re on Linux, you should be able to just use the command to output your certificate to a directory of your choice and then run the command to generate the PKCS#12 bundle.tailscale certopenssl pkcs12
+Note that you will need to enter a password for the PKCS#12 certificate. If not, many clients (like Firefox) will fail to import the certificate.
+Importing into Browser
+Installing the PKCS#12 certificate is usually straightforward. On Firefox, you just do:
+Go to Preferences &amp;gt; Privacy &amp;amp; Security &amp;gt; Certificates &amp;gt; View Certificates.
+Click on Import and select the certificate.p12 file.
+Enter the password you set during the creation of the PKCS#12 file.
+Setting up a Server for mTLS
+There are a lot of ways to set up a server to use mTLS, including Nginx, Envoy, or your favorite web server. The most lightweight way to set up mTLS in my experience is to use ghostunnel.
+We are going to assume you’ve set up your server as per my previous guide and have your certs in ready to go./etc/ssl/private
+With that ready, you can just fire up in Docker as follows:ghostunnel
+&lt;/span&gt; docker run -d &lt;br&gt;
+--name ghostunnel &lt;br&gt;
+-p 0.0.0.0:443:443 &lt;br&gt;
+--network my-network &lt;br&gt;
+-v /etc/ssl/private:/certs &lt;br&gt;
+ghostunnel/ghostunnel server &lt;br&gt;
+--listen 0.0.0.0:443 &lt;br&gt;
+--target my-server:80 &lt;br&gt;
+--cert /certs/&lt;span class=&#39;katex-error&#39; title=&#39;ParseError: KaTeX parse error: Undefined control sequence: \
+ at position 19: …stname -f).crt \̲
+̲        --key /…&#39;&gt;(hostname -f).crt \
+        --key /certs/&lt;/span&gt;(hostname -f).key &lt;br&gt;
+--unsafe-target &lt;br&gt;
+--allow-cn my-device.ts-network.ts.net &lt;br&gt;
+--allow-cn my-other-device.ts-network.ts.net&lt;br&gt;
+The above script spins up a instance that reverse proxies the traffic on the Docker network to the container on port . We also automatically apply a ruleset with that only allows devices presenting a client certificate that matches either or . All other requests will be rejected.ghostunnelmy-networkmy-server80--allow-cnmy-device.ts-network.ts.netmy-other-device.ts-network.ts.net&lt;br&gt;
+Testing with curl&lt;br&gt;
+Now back to our client, let’s make a test request using :curl&lt;br&gt;
+$ curl &lt;br&gt;
+--key &amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;HOME/Library/Containers/io.tailscale.ipn.macos/Data/&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.10903em;&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;(hostname -f).key&amp;quot; &lt;br&gt;
+--cert &amp;quot;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;HOME/Library/Containers/io.tailscale.ipn.macos/Data/&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.10903em;&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;(hostname -f).crt&amp;quot; &lt;br&gt;
+https://my-server.ts-network.ts.net&lt;br&gt;
+Assuming this worked, you should now be able to move on to your browser and authenticate using your newly installed client certificate.&lt;br&gt;
+Simply enter and you should get a prompt like this:https://my-server.ts-network.ts.net&lt;br&gt;
+Using Tailscale certificate for Mutual TLS (mTLS) in Firefox&lt;br&gt;
+Congrats! You’ve now successfully authenticated using your Tailscale client certificate in your browser.&lt;br&gt;
+Do however note that the client certificate will expire, so you will periodically need to repeat the process.&lt;br&gt;
+Happy hacking!&lt;/p&gt;
+">Secure your Tailscale infra further with Mutual TLS (mTLS)</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/webdevbegin/"" data-c="
+          &lt;p&gt;你是否曾想过自己构建一个网站？也许是一个展示个人作品的博客，一个分享兴趣爱好的平台，或者一个为小型企业提供服务的网页。无论你的目标是什么，网页开发都能为你提供实现的工具和途径。&lt;br&gt;
+本文将为你提供一个清晰易懂的路线图，帮助你从零开始学习网页开发，并最终构建出属于你自己的网站。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第一步：了解网页开发的基础&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;网页开发主要分为前端开发和后端开发两部分。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;前端开发&lt;/strong&gt;负责网站的用户界面，包括网页的布局、样式和交互效果。主要使用 HTML、CSS 和 JavaScript 三种语言。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML (HyperText Markup Language)&lt;/strong&gt;：网页的骨架，用于定义网页的结构和内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS (Cascading Style Sheets)&lt;/strong&gt;：网页的皮肤，用于定义网页的样式和外观，如颜色、字体、布局等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;：网页的灵魂，用于添加交互效果、处理用户操作和动态更新网页内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;后端开发&lt;/strong&gt;负责网站的后台逻辑和数据处理，例如用户注册、登录、数据存储等。常用的后端语言包括 Python、Java、PHP 等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第二步：选择合适的学习资源&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;网络上提供了丰富的网页开发学习资源，包括在线课程、教程、书籍和社区论坛。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在线课程平台&lt;/strong&gt;: Codecademy, freeCodeCamp, Udemy, Coursera 等平台提供结构化的课程，适合循序渐进学习。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;交互式教程&lt;/strong&gt;: W3Schools, MDN Web Docs 等网站提供交互式教程，让你边学边实践。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;书籍&lt;/strong&gt;: 《HTML 和 CSS 设计与构建》、《JavaScript 高级程序设计》等书籍提供深入的理论知识。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社区论坛&lt;/strong&gt;: Stack Overflow, Reddit 等社区论坛可以帮助你解决学习过程中遇到的问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第三步：搭建开发环境&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你需要一个合适的开发环境来编写和运行代码。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;代码编辑器&lt;/strong&gt;: Visual Studio Code, Sublime Text, Atom 等代码编辑器提供语法高亮、代码补全等功能，提高开发效率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器&lt;/strong&gt;: Chrome, Firefox, Safari 等浏览器用于预览和调试网页代码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地服务器&lt;/strong&gt;: XAMPP, WAMP 等本地服务器软件可以模拟网站运行环境，方便测试和调试。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第四步：开始实践，构建第一个项目&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;理论知识固然重要，但实践才是检验真理的唯一标准。建议你从一个简单的项目开始，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;个人博客&lt;/strong&gt;: 使用 HTML、CSS 和 JavaScript 构建一个简单的个人博客，展示你的文章和作品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;待办事项列表&lt;/strong&gt;: 使用 JavaScript 实现一个待办事项列表，可以添加、删除和标记任务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;天气预报&lt;/strong&gt;: 使用 API 获取天气数据，并使用 HTML、CSS 和 JavaScript 展示天气信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第五步：持续学习，不断进步&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;网页开发是一个不断学习和进化的过程。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关注行业动态&lt;/strong&gt;: 阅读博客文章、参加技术会议，了解最新的技术趋势和工具。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;参与开源项目&lt;/strong&gt;: 贡献代码给开源项目，学习别人的代码，提升自己的编程能力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;构建更复杂的项目&lt;/strong&gt;: 挑战自己，构建更复杂的项目，例如电商网站、社交平台等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Building Your First Website: A Beginner&#39;s Guide&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Have you ever dreamed of building your own website? Maybe a blog to showcase your work, a platform to share your passions, or a website to provide services for a small business. No matter your goal, web development empowers you with the tools and pathways to achieve it.&lt;/p&gt;
+&lt;p&gt;This article provides a clear and concise roadmap to guide you from zero to hero in web development, ultimately enabling you to build your own website.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Understanding the Fundamentals of Web Development&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web development is broadly divided into front-end development and back-end development.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Front-end development&lt;/strong&gt; focuses on the user interface of a website, encompassing its layout, style, and interactive elements. It primarily utilizes HTML, CSS, and JavaScript.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML (HyperText Markup Language)&lt;/strong&gt;: The backbone of a webpage, used to define its structure and content.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS (Cascading Style Sheets)&lt;/strong&gt;: The skin of a webpage, used to define its style and appearance, such as colors, fonts, and layout.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;: The soul of a webpage, used to add interactive effects, handle user actions, and dynamically update webpage content.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Back-end development&lt;/strong&gt; handles the behind-the-scenes logic and data processing of a website, such as user registration, login, and data storage. Common back-end languages include Python, Java,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+">从零开始构建网站：初学者指南Building Your First Website: A Beginner's Guide</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/webdev/"" data-c="
+          &lt;p&gt;网页开发，一个充满创造力和挑战的领域，吸引着越来越多的人加入其中。想要构建出美观、功能强大的网站，需要掌握一系列的编程语言和工具。本文将为初学者提供一份简洁易懂的指南，介绍网页开发中常用的编程语言和工具，帮助你开启这段精彩的旅程。本文为中英双语版，英语版位于文章下方。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、 前端开发：构建用户界面&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;前端开发主要负责网站的用户界面，包括网页的布局、样式和交互效果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML (HyperText Markup Language)：&lt;/strong&gt; 网页的骨架，用于定义网页的结构和内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS (Cascading Style Sheets)：&lt;/strong&gt; 网页的皮肤，用于定义网页的样式和外观，如颜色、字体、布局等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript：&lt;/strong&gt; 网页的灵魂，用于添加交互效果、处理用户操作和动态更新网页内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;常用工具：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;代码编辑器：&lt;/strong&gt; 用于编写代码，例如 Visual Studio Code、Sublime Text、Atom 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器开发者工具：&lt;/strong&gt; 用于调试和测试网页代码，例如 Chrome DevTools、Firefox Developer Tools 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前端框架：&lt;/strong&gt; 用于简化开发流程，例如 React、Vue.js、Angular 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;二、 后端开发：处理数据和逻辑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;后端开发主要负责网站的后台逻辑和数据处理，例如用户注册、登录、数据存储等。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python：&lt;/strong&gt; 一种简洁易学的编程语言，广泛用于后端开发，拥有丰富的库和框架。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java：&lt;/strong&gt; 一种功能强大的编程语言，常用于大型网站和企业级应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PHP：&lt;/strong&gt; 一种专门用于网页开发的脚本语言，与数据库交互能力强。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node.js：&lt;/strong&gt; 基于 JavaScript 的后端开发环境，可以实现前后端代码的统一。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;常用工具：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据库：&lt;/strong&gt; 用于存储和管理网站数据，例如 MySQL、PostgreSQL、MongoDB 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务器：&lt;/strong&gt; 用于运行网站代码和处理用户请求，例如 Apache、Nginx 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后端框架：&lt;/strong&gt; 用于简化开发流程，例如 Django (Python)、Spring Boot (Java)、Laravel (PHP) 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;三、 全栈开发：前端和后端一体化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全栈开发是指同时掌握前端和后端开发技能，能够独立完成整个网站的开发工作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;学习建议：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;循序渐进：&lt;/strong&gt; 从基础的 HTML、CSS、JavaScript 开始学习，逐步深入到后端开发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实践为主：&lt;/strong&gt; 多动手编写代码，尝试构建简单的项目，将理论知识转化为实际技能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不断学习：&lt;/strong&gt; 网页开发领域技术更新迅速，需要不断学习新的知识和工具。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加入社区：&lt;/strong&gt; 与其他开发者交流学习，分享经验，共同进步。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Embarking on the Web Development Journey: A Guide to Programming Languages and Tools&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web development, a field brimming with creativity and challenges, is attracting an increasing number of individuals. To build beautiful and functional websites, one must master a range of programming languages and tools. This article provides a concise guide for beginners, introducing common programming languages and tools used in web development, helping you embark on this exciting journey.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I. Front-End Development: Building the User Interface&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Front-end development focuses on the user interface of a website, including its layout, style, and interactive elements.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML (HyperText Markup Language):&lt;/strong&gt; The skeleton of a webpage, used to define its structure and content.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS (Cascading Style Sheets):&lt;/strong&gt; The skin of a webpage, used to define its style and appearance, such as colors, fonts, and layout.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript:&lt;/strong&gt; The soul of a webpage, used to add interactive effects, handle user actions, and dynamically update webpage content.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Common Tools:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code Editors:&lt;/strong&gt; Used for writing code, such as Visual Studio Code, Sublime Text, Atom, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Browser Developer Tools:&lt;/strong&gt; Used for debugging and testing webpage code, such as Chrome DevTools, Firefox Developer Tools, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Front-End Frameworks:&lt;/strong&gt; Used to simplify the development process, such as React, Vue.js, Angular, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;II. Back-End Development: Handling Data and Logic&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Back-end development focuses on the behind-the-scenes logic and data processing of a website, such as user registration, login, and data storage.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; A concise and easy-to-learn programming language widely used in back-end development, with a rich ecosystem of libraries and frameworks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java:&lt;/strong&gt; A powerful programming language often&lt;/li&gt;
+&lt;/ul&gt;
+">踏入网页开发世界：编程语言与工具指南Embarking on the Web Development Journey: A Guide to Programming Languages and Tools</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/fld/"" data-c="
+          &lt;p&gt;在互联网的世界中，一场关于利益与公理的较量正在悄然上演。近日，DNFM官方宣布，自6月20日起，不再上架部分安卓平台的应用商店，如HW、OPPO、vivo等渠道将停止更新。这一举措看似平常，实则背后隐藏着巨大的利益博弈——硬核联盟。&lt;br&gt;
+全球范围内，安卓渠道抽成普遍高达50%，而中国市场的抽成比例更是令人咋舌。在这个畸形的体系中，腾讯打响了反击的第一枪。背靠800万勇士，腾讯向垄断霸权开响了第一枪！&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;【渠道为王的时代】&lt;/p&gt;
+&lt;p&gt;过去，我们一直信奉“渠道为王”。在市场上，谁的声音大，谁就是真理。安卓手机在中国市场的占有率一度超过80%，如此巨大的流量入口，谁也不愿放弃。2014年，最大的几家国产手机厂商组成了硬核联盟，几乎垄断了国内移动应用和移动内容的分发。&lt;/p&gt;
+&lt;p&gt;但这种模式真的合理吗？渠道商提供的服务真的值得上50%的分成吗？当所有用户只能接触到质量低下的游戏时，这个市场已经走向了深渊。&lt;/p&gt;
+&lt;p&gt;【巨头的挑战】&lt;/p&gt;
+&lt;p&gt;面对这畸形的模式，腾讯、网易等巨头终于开始反抗。他们要求将佣金降到30%，但谈判显然没有成功。对于胆敢不交保护费的应用，如《原神》，硬核联盟甚至将其定义为诈骗软件。&lt;/p&gt;
+&lt;p&gt;这造成的影响远比我们想象的要大。中国从一个新兴市场迅速成为全球第一大游戏市场，但技术方面却几乎停滞不前。所有人都在绞尽脑汁思考如何氪金，而不是提升画面质量。&lt;/p&gt;
+&lt;p&gt;【两条道路，两种结果】&lt;/p&gt;
+&lt;p&gt;与此同时，大洋彼岸却是另一番景象。他们在高速进步一段时间后，继续卷技术，而我们却自废武功去卷营销。英伟达推出第一款现代意义上的GPU——GeForce256，彻底改变了硬件与软件的关系。他们的成功告诉我们，把游戏做到极致，真的可以改变世界。&lt;/p&gt;
+&lt;p&gt;不同的选择导致了不同的结果。现在的局面不能说完全错了，但造成的结果确实不太好。单纯从商业模式来看，中国手游是全世界最先进的，捞金效率第一。但在捞快钱的同时，不论是用户的信任还是技术能力都在倒退。&lt;/p&gt;
+&lt;p&gt;【尾声】&lt;/p&gt;
+&lt;p&gt;今天的局面是我们自己选择的。腾讯的反击只是开始，我们需要更多的声音来挑战这个垄断霸权。只有打破这个畸形的模式，中国的游戏市场才能真正走向成熟，走向未来。&lt;/p&gt;
+">腾讯挑战垄断霸权，打响渠道分成第一枪！</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/aiedu/"" data-c="
+          &lt;p&gt;中国AI技术在教育中的应用已经取得显著进展，&lt;strong&gt;主要体现在智能测评系统、智能教学系统、虚拟现实教育以及教育机器人方面&lt;/strong&gt;。具体如下：&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;智能测评系统&lt;/strong&gt;：智能测评系统利用文字识别和语音识别技术，快速、高效、准确地批改学生作业，并根据结果对学生学习情况进行智能评估，生成个性化反馈。这不仅减轻了教师的课后负担，还帮助教师更直观地了解学生的学习情况，有针对性地制定教学方案[&lt;sup&gt;3&lt;/sup&gt;]。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能教学系统&lt;/strong&gt;：智能教学系统依托网络为学生提供一对一的教学服务，对每位学生的学习情况进行精准评估，定制个性化的学习内容和计划。此外，智能教学系统还能根据学生的面部表情、言语等可察因素实现情感感知和干预，提高教学效果[&lt;sup&gt;3&lt;/sup&gt;]。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;虚拟现实教育&lt;/strong&gt;：虚拟现实技术极大地丰富了教育的形式和内容。通过创建仿真的教学场景，学生能够在虚拟空间中自由探索，增强可视化教学的视觉效果，培养学习兴趣，激发学习积极性[&lt;sup&gt;3&lt;/sup&gt;]。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;教育机器人&lt;/strong&gt;：教育机器人融合多个领域技术，构建全新的学习环境，并参与到课堂活动中去。它们协助教师开展教学活动，激发学生兴趣，解决疑难问题，为课堂氛围注入新的活力[&lt;sup&gt;3&lt;/sup&gt;]。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总的来说，中国在AI+教育领域已取得显著进展，但仍需持续努力以解决存在的挑战，最终实现教育资源的公平共享和优质教育的普及。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;“AI+教育”应用场景广泛 未来将呈现怎样的趋势？ - 央视网&lt;/li&gt;
+&lt;li&gt;2022人工智能教育蓝皮书：现状、挑战与发展建议｜附下载&lt;/li&gt;
+&lt;li&gt;人工智能促进教育事业新发展 - 中国社会科学院&lt;/li&gt;
+&lt;li&gt;人工智能促进教育变革创新 - 中华人民共和国教育部政府 ...&lt;/li&gt;
+&lt;li&gt;人工智能与教育丨教育领域人工智能的应用现状、影响与挑战 ...&lt;/li&gt;
+&lt;/ol&gt;
+">中国AI技术在教育中的应用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/zanzhu/"" data-c="
+          &lt;p&gt;亲爱的CodePark访问者们：&lt;br&gt;
+你们好！&lt;br&gt;
+我是CodePark的站长Hazel。今天，我带着一份感激之情，写下这封信，与大家分享我们的现状与未来，以及一个特别的请求。&lt;br&gt;
+自CodePark成立以来，我一直致力于为广大用户输出高质量内容。然而，随着加载资源与加载速度要求的不断提高，我们的服务器承载着巨大的运营压力。同时，现有的二级域名无法满足百度等引擎的收录条件，因此，为了保持网站的流畅访问和快速响应以更好的向大家服务，我们迫切需要升级我们的运营条件。&lt;br&gt;
+在此，我想对一直以来支持CodePark的每一位用户表示最诚挚的感谢。是你们的热爱和支持，让这个平台充满了活力和创造力。然而，技术的更新换代需要不小的资金投入，而我们始终坚持将资金用于提升用户体验和服务质量上，因此，我们决定寻求外部赞助。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;我们已经创建了一个赞助商名单，记录那些以不同方式支持过我们的朋友们。为了确保透明度和专款专用，我们将只接受以下形式的赞助（不包括钱款）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;对象存储服务&lt;/strong&gt;自带二级域名皆可：用于存放我们庞大的数据和文件，确保数据的安全稳定。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FTP静态虚拟主机&lt;/strong&gt;自带二级域名皆可：用于托管我们的静态资源，提高加载速度和访问效率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;域名赞助&lt;/strong&gt;顶级域名：帮助我们维持网站品牌的连续性和稳定性。&lt;br&gt;
+我们承诺，每一分钱的赞助都将直接用于网站的运营和维护中，不会有任何挪用。同时，我们也将为所有赞助者在网站上提供相应的鸣谢和标识，以示我们对您慷慨支持的认可和感激。&lt;br&gt;
+我们深知，没有你们的鼎力相助，CodePark无法走到今天。因此，在这里，我想对每一位愿意伸出援手的朋友说一句：谢谢！你们的支持是我们最大的动力，也是我们不断前进的源泉。&lt;br&gt;
+如果您愿意加入我们的赞助者行列，请通过我们取得联系。我们期待与您携手，共同打造一个更加出色的CodePark。&lt;br&gt;
+最后，愿我们的社区因您的加入而更加繁荣，愿CodePark因您的支持而更加强大。让我们一起，为梦想加油，为未来努力！&lt;br&gt;
+衷心感谢，&lt;br&gt;
+Hazel&lt;br&gt;
+CodePark&lt;/li&gt;
+&lt;/ol&gt;
+">【感恩前行，共筑梦想】——CodePark站长Hazel致广大赞助者的一封信</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/cnai/"" data-c="
+          &lt;h1 id=&#34;中国ai技术的崛起&#34;&gt;中国AI技术的崛起&lt;/h1&gt;
+&lt;h2 id=&#34;目录&#34;&gt;目录&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AI技术的新发展&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中国AI企业崛起的背景&lt;/li&gt;
+&lt;li&gt;技术创新与市场策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AI技术突破与应用案例&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;深度学习、机器视觉和自然语言处理的进展&lt;/li&gt;
+&lt;li&gt;面部识别系统与智能语音识别技术的成功应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;成功进入美国市场的策略和挑战&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应对文化差异和市场准入壁垒&lt;/li&gt;
+&lt;li&gt;与当地教育机构和科研机构的合作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;未来发展趋势&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI技术在智能制造和智慧城市领域的潜力&lt;/li&gt;
+&lt;li&gt;国际竞争与中美AI领域的合作与竞争&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI技术“出海”的意义&lt;/li&gt;
+&lt;li&gt;中国企业在全球科技舞台上的未来展望&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在当今科技迅猛发展的时代，人工智能（AI）已成为全球创新的核心力量。近年来，中国的AI企业不仅在国内市场上取得了显著成就，而且凭借其技术创新和精准的市场策略，成功拓展了竞争激烈的美国市场。这一成就背后，是企业不懈的追求和努力，以及深层次的战略布局和文化适应。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;中国AI技术的突破主要体现在深度学习、机器视觉和自然语言处理等领域。例如，某知名中国AI公司开发的面部识别系统，以其高达99.8%的准确率在全球范围内广受欢迎；另一家AI初创公司的智能语音识别技术，在美国教育市场上取得显著成效，帮助学生提高了语言学习效率。这些实际应用的成功案例，展示了中国AI技术的高水平，并提升了中国企业的国际声誉。&lt;/p&gt;
+&lt;p&gt;然而，中国AI企业的美国之行并非没有挑战。面对文化差异、市场准入壁垒和知识产权保护等问题，中国企业采取了多种策略应对。这包括与当地高校、研究机构合作，加强技术研发和人才引进，提升产品竞争力；积极参与当地社区活动，增加品牌曝光，树立良好的企业形象；同时重视知识产权保护，遵守国际贸易规则，减少法律风险。&lt;/p&gt;
+&lt;p&gt;展望未来，随着AI技术的不断进步，中国AI企业在美国市场的发展将呈现多元化趋势。随着5G、物联网等新技术的融合应用，AI将在智能制造、智慧城市等领域展现更大潜力；同时，国际竞争加剧，中国企业需要不断提升自主创新能力，加强国际合作，共同推动全球AI技术的发展。&lt;/p&gt;
+&lt;p&gt;在这一过程中，中美两国在AI领域的合作与竞争将成为常态。中国企业在享受技术进步带来的市场机遇的同时，也将面临更复杂的国际环境和更高的技术要求。如何在保持技术创新的同时，处理好与国际市场的关系，是中国企业未来必须认真思考的问题。&lt;/p&gt;
+&lt;p&gt;总的来说，中国AI技术的成功“出海”，不仅是技术创新的胜利，也是中国文化与智慧走向世界的生动实践。我们有理由相信，在中国AI企业的持续努力下，他们在全球科技舞台上的表现将更加精彩。&lt;/p&gt;
+">中国AI技术的崛起</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/hncloud/"" data-c="
+          &lt;p&gt;在数字化时代，云计算服务日渐成为企业与个人提高效率、实现价值创造的关键工具。华纳云作为行业内的领先者，致力于为用户提供安全、高效、可靠的云端服务体验。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;核心服务优势&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全面而灵活的服务选项&lt;/strong&gt;: 华纳云提供包括云服务器、云存储、CDN网络加速及云数据库等多种服务，满足不同规模和需求的客户。无论是初创公司还是大型企业，都能在这里找到合适的解决方案。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;顶尖的安全保护&lt;/strong&gt;: 信息安全是云计算用户最关心的问题之一。华纳云采用世界先进的数据加密技术及多层防护措施，确保用户数据的安全性和隐私保护，让您安心将数据托管于云端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;卓越的性能与可靠性&lt;/strong&gt;: 通过高效的数据中心和优质的网络架构，华纳云保证了服务的高可用性和低延迟。无论您身处何地，都能享受到稳定快速的云端服务体验。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全天候技术支持&lt;/strong&gt;: 华纳云提供7*24小时的客户服务与技术支持，无论遇到任何问题，都有专业团队随时准备协助解决，确保您的业务无间断运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;企业云化&lt;/strong&gt;: 帮助企业轻松迁移到云端，无需担心硬件限制，根据需求弹性调整资源，助力企业实现数字化转型。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;网站和应用托管&lt;/strong&gt;: 适用于各种规模的网站和应用，保证全球范围内的高速访问和数据安全。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据备份与存储&lt;/strong&gt;: 提供可靠的云存储方案，帮助企业和个人进行数据备份，保障数据不丢失，同时支持高效的数据存取。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;大数据分析&lt;/strong&gt;: 支撑大数据处理和分析需求，帮助企业洞察数据价值，优化决策过程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;为什么选择华纳云？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;选择华纳云，意味着选择了一个全新的效率和稳定性的保障。我们不仅提供标准化的云端服务产品，更注重为客户提供定制化的解决方案，以满足特定需求。我们的愿景是帮助每一个用户，无论是企业还是个人，都能在数字化道路上更加顺畅地前行。&lt;/p&gt;
+&lt;p&gt;立刻加入华纳云的用户行列，享受我们为您准备的全方位云端服务，开启您的云端高效工作与生活之旅！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;随着技术的不断进步和创新，华纳云将继续致力于提供更优质、更安全、更高效的云计算服务，助力全球用户实现业务的持续增长和成功。立即访问 &lt;a href=&#34;https://www.hncloud.com/activity/activity_2024618.html?k=HPABSW&#34;&gt;华纳云官网&lt;/a&gt;，了解更多信息，开启您的专属云端之旅。&lt;/p&gt;
+&lt;p&gt;请注意，本文是推广文章，关于华纳云的具体服务内容、优势及活动细节，建议您直接访问其官方网站或与官方代表联系获取最新和最准确的信息。&lt;/p&gt;
+">推广：华纳云，开启您的云端高效工作与生活之旅</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/duanwu/"" data-c="
+          &lt;p&gt;端午节，又称端阳节、龙舟节，源远流长，其起源可追溯至中国古代，为纪念爱国诗人屈原而设立。屈原忠于国家，却遭排挤陷害，在五月初五投汨罗江自尽。民间为了纪念他的高尚品德和爱国精神，便有了划龙舟、吃粽子、挂艾草等一系列习俗。这些活动不仅寄托了人们对屈原的哀思，也寓意着驱邪避疫、祈求健康平安。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;随着时间的流逝，端午节的庆祝方式虽然发生了变化，但其核心精神——团结与互助仍然深深植根于人们心中。尤其是在现代社区活动中，端午节成为了加强邻里关系的绝佳契机。社区组织包粽子比赛、制作香囊工坊以及龙舟模拟赛等活动，不仅让居民感受到节日的乐趣，更重要的是促进了邻里间的交流与合作。在共同参与的过程中，人们相互了解加深，友谊得以升华，社区的凝聚力因此增强。&lt;/p&gt;
+&lt;p&gt;在快节奏的现代生活中，许多传统节日渐渐失去了它们原有的意义和仪式感。然而，通过创新的方式传承和发扬中国的传统节日文化显得尤为重要。社区作为连接个体与社会的纽带，其在传播传统文化中扮演着至关重要的角色。将古老的节日习俗融入当代生活，不仅能够激发年轻一代对传统文化的兴趣和认同感，还能够构建一个更加和谐的社会环境。&lt;/p&gt;
+&lt;p&gt;为了更好地实现这一目标，社区应当积极举办各种形式的节日文化活动，同时利用现代技术手段，如社交媒体、线上直播等，扩大活动的影响力和参与度。通过这些渠道，不仅可以让更多年轻人了解并参与到传统节日的庆祝中来，还可以使节日文化得到跨地域、跨文化的分享和传播。这样，端午节不仅仅是中国人的节日，更成为了世界了解中国文化的一个窗口。&lt;/p&gt;
+&lt;p&gt;总而言之，端午节作为中国传统文化的重要组成部分，承载着深厚的历史与文化价值。在现代社会背景下，通过社区的努力和文化的创新传播，端午节能够不断适应新时代的发展，成为连接邻里、传承文化的重要桥梁。只有不断探索和实践，我们才能确保这一宝贵的文化遗产在未来继续发光发热，让更多人了解并珍视这份来自先人的智慧和财富。&lt;/p&gt;
+">端午节：传统与现代的邻里桥梁</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/jsdelivr/"" data-c="
+          &lt;p&gt;作为一个长期从事Web开发的人员，我对jsDelivr的熟悉程度是很深的。jsDelivr在全球CDN加速板块中的地位无疑是举足轻重的，其庞大的使用量加上免费的服务使其在业界享有很高的声誉。然而，从2021年12月20日起，jsDelivr在中国遭遇了一系列严重的问题，如SSL证书过期和ICP牌照被工信部撤销等。直至今日，托管在jsDelivr上的文件仍无法在中国大陆的所有省市正常访问。&lt;/p&gt;
+&lt;p&gt;这一系列问题的根源在于部分用户对jsDelivr服务的滥用。这些用户利用jsDelivr建立图床、存放视频、文件备份、甚至全站托管，进而上传及传播违反中国大陆相关法规与政策的内容。尽管jsDelivr在事发之前已经更新了其可接受使用政策，但这些用户仍然选择无视此政策，或故意违反。&lt;/p&gt;
+&lt;p&gt;面对这些情况，网络管理部门若无法逐一审查或追踪这些服务内容是否符合当地要求，最快的阻断方法便是全域拦截。因此，在2021年12月20日，jsDelivr遭遇了它在中国的重要转折点——ICP牌照被撤销。基于此，国内合作的加速厂商也迅速遵循相关要求，在未经通知的情况下关闭了加速节点。&lt;/p&gt;
+&lt;p&gt;值得一提的是，jsDelivr是唯一一个拥有中国政府颁发的有效ICP许可证的公共CDN服务商，在中国大陆直接拥有数百个节点。然而，由于滥用者的行为，这一优势在瞬间变得毫无意义。&lt;/p&gt;
+&lt;p&gt;对于这种局面，我感到十分痛心。滥用者的行为不仅严重影响了jsDelivr的正常运营，还给我们这些开发者带来了很多困扰。因此，我想借此机会对那些滥用者表示强烈的谴责。你们的行为不仅破坏了网络环境，也给广大开发者带来了不小的困扰。我希望你们能够意识到自己的错误，停止这种滥用行为。&lt;/p&gt;
+&lt;p&gt;同时，我也想提出一些解决方案。首先，我们应加强自身的法律意识，遵守网络法规，不参与任何违法活动。其次，我们可以选择其他的JSCDN服务，比如七牛云、又怕云、bootcss等，它们在国内的服务相对稳定，且符合中国的法律法规。最后，我们也期待jsDelivr能够尽快解决当前的问题，恢复在中国的正常服务。&lt;/p&gt;
+">jsDelivr在中国的困境：滥用的后果与解决方案</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/lizhi/"" data-c="
+          &lt;p&gt;1.衡水中学演讲张锡峰演讲稿&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;青春与梦想&lt;br&gt;
+尊敬的老师，亲爱的同学们：&lt;br&gt;
+大家好!我是838班的张锡峰。相信很多同学应该认识我，在大家眼里，我扮演更多的通常是个谐星的角色。可是大家似乎忘记了，在我这看似狂野、实则狂野的外表下，也隐藏着一颗憧憬阳光的心。所以，我站在这里，与大家分享关于学习我的看法。&lt;br&gt;
+我演讲的主题是：青春与梦想。&lt;br&gt;
+话说这世间，唯有青春和梦想不可辜负。花开正好，微风不燥，我们扬帆，起航。&lt;br&gt;
+首先，青春，青春是什么颜色的?是五月的花海，灿烂无比;是海边的浪花，永不停息;是仲夏的骄阳，激情四射;青春在衡中，是绚丽多彩的。&lt;br&gt;
+原来啊，我常常想，别人尊重我，是因为，我很优秀。可是，到了衡中才发现，别人尊重我，是因为，别人很优秀。这，是衡中学子，独有的青春魅力。&lt;br&gt;
+同样，正值青春，我们有犯错的权利。记得第一次交改错本，我问老师要改多少?老师说，根据个人情况，在精不在多。哦?是吗?这可是您说的。说时迟那时快，我顿时绽放了一个耀眼的笑容。我心不在焉，草草了事，可是，改错发下来时却是一片万紫千红的样子，上面有详细的批注。评语是这样的：这个改错改得不错，有些题改着改着就错了。我们老师青春活泼的力量，就这样让学习生活妙趣横生。&lt;br&gt;
+其次，是这里青春的学习气氛。当你满眼都是追求卓越的字样时，便也没理由落后了。连我这个，被同学们誉为：古娜拉黑暗之神的人，也早已经在前往卓越的路上。&lt;br&gt;
+我喜欢，在某个课间琢磨那些优雅的、美丽的数学题：小东西，真别致。&lt;br&gt;
+我喜欢，在某天清晨头昏脑胀时，回想刚学过的，系统命名法：哇，这一瞬间有一百万个可能。&lt;br&gt;
+我喜欢，某天晚上躺在床上，回想曾经背过的老子：知人者智，自知者明;胜人者有力，自胜者强。我好困啊……&lt;br&gt;
+第二，梦想。有一条路，人烟稀少寸步难行，但是，却不得不坚持前进。因为它的尽头，种着梦想。同学们，你的梦想是什么?&lt;br&gt;
+相信，很多人的回答都会是清北这样的顶尖名校。我们选择它们不仅仅因为它们是名校，还因为它们坐落的城市，它们美丽的传说。对于痴迷于地理学科的我来说，外面的世界，外面的城市就是我的梦想。&lt;br&gt;
+这里，广东，对外开放的前沿，我把它做成卡贴随身携带;这里，上海，全中国最大的城市，我把它拍成照片贴在课桌上;这里，西安，大唐不夜城，我做梦都会想起它。看完这些，不知道同学们心里有什么感触。此刻，你的心里是否充满了对未来的渴望?&lt;br&gt;
+我问同学们一个问题，请大家伸出右手。看，它像什么?请大家五指并拢，放在腰间，慢慢高举，举过头顶，张开。成功了吗?那恭喜你，你给自己，放了个烟花。&lt;br&gt;
+可是，烟花虽美，转瞬即逝。现在，请同学们伸出你的烟花，把它攥成拳。大家看，它又像什么?请大家把你的右拳置于你的耳边，如果你能清楚地听到脉搏的律动，那么我告诉你，这，是生命。&lt;br&gt;
+我们的梦想很美，很远大;但只有把掌握成拳，用尽全力，挥向生活，这样才是青春路上该有的姿态。&lt;br&gt;
+同学们，你有没有感到一种震撼?相信很多人都会跟我一样，因为这是一种念想。一种发自内心、由内而外的对城市和未来的渴望。&lt;br&gt;
+少年们早已不想拘泥于这里，只能在所谓抖音和电影里去观望别人的生活。可是，为什么我们就只能做那个躲在阴暗的角落里，新鲜的舞台之上，光鲜亮丽的别人的那个卑微的人。这样不行，一点都不好玩。&lt;br&gt;
+我们会走出去，顺境也好逆境也好，人生本就是一场与种种困难无休无尽的斗争，一场敌众我寡的斗争。我曾把自己向往的大学热爱的城市拍成照片贴在课桌上。每当我精疲力竭时，都要看一下它，然后质问自己：就这样啦，你就这点东西?你真的真的到了最后歇斯底里不能坚持的地步了吗?你的理想是诗理想是梦，理想是远方的田野，是穿越世界的旅行!但现在你能做的所有，只是把手握紧，厚积薄发。你只有付出，付出你的时间，堵上你的尊严，拿出你的全部，你的everything!&lt;br&gt;
+当别人打游戏时你在学习，当别人睡懒觉时你在学习，你含着泪在深夜里舞蹈，在回忆里奔跑!没有人，在年少时想成为一个普通人。尽管生活，它会剥夺你的所爱，践踏你的尊严，把你踩在脚下遍体鳞伤，但你怎能倒下。你的身后，是挚爱的人。那些受过的伤都将成为你的勋章，都是你送给未来的自己最好的礼物!我，也有梦想啊！&lt;br&gt;
+我告诉自己，总有一天，我会站在金色的舞台上，聚光灯打向我，摄像机对准我，所有人的目光注视着我，我能站在台上侃侃而谈。此刻，世界只有我一人。&lt;br&gt;
+我要让平日里轻蔑我的对手知道，我要让他们亲口说出那三个字：你赢了!&lt;br&gt;
+如果说，青春是足迹，那梦想一定叫做远方。请同学们相信：生活明朗，万物可爱;人间值得，未来可期。&lt;br&gt;
+2.《小小的世界大大的你》演讲&lt;br&gt;
+村里上春树说，普通人啊，生在普通家庭，长在普通家庭，一张普通的脸，普通的成绩，想着普通的事情，我就是这样一个普通的人。&lt;br&gt;
+我出生于河北省东部的一个小小乡村，在那里度过了平平淡淡将近十年的时光。小镇的风不大，但傍晚的风总是很温柔，人也憨厚，我像大多数农村的孩子一样，白天和小伙伴一起一起奔跑，一起爬树，一起在麦田里打滚，到了傍晚，就搬着小凳子，坐在自家门口，吹着凉风，摇着爷爷的蒲扇。那时候，因为简单所以快乐。&lt;br&gt;
+由农村到城市上学，我的契机其实是乡下教育资源的匮乏，两间屋子，三个年级，这就是我当时上学的地方。你们可能这辈子都没有经历过有老师向学生请教单词发音这样奇葩的事情。因为我们的英语老师都是语文老师客串的。他们可能上午听过几遍录音，下午就来给我们上课了。&lt;br&gt;
+于是，我离开了家，离开了那片给我生命，让我成长的热土，我到了城里读书。我最初的愿望，其实是最美好的，明亮的教室，统一的书桌，辽阔的操场，还有那早就听说过的，神奇的多媒体教学。&lt;br&gt;
+可等我真正到了那里才发现，事情远非那么简单。我至今仍然清楚地记得新学期报道的那一天，我用家乡话做出的自我介绍，惹得全班同学哄堂大笑，体育课上，我因分不清自家球门和对手球门，而被所有队友指责，晚上放学，一些同学陆续被家长用轿车接走，而我只能背着沉重的书包，一步一步走路回家。那天，我一个人，低着头，走在回家的路上，心里翻江倒海，我想了很多东西，人们都说寒门出贵子，这到底是不是一个笑话，谁说人家城里的孩子，富人家的孩子，就只是那些不知进取，混吃等死的纨绔子弟，他们往往比你更加努力，从小开始，他们的眼界，格局，素养，知识储备，家庭背景，都要比你好千万倍，你每天挤公交，半个小时去辅导班上课手都不敢举，而人家已经把一对一的家教请到了家里。&lt;br&gt;
+每次周末，你面对的是喜羊羊，灰太狼，是集卡片和弹珠游戏，而人家是钢琴辅导班，音乐辅导班，英语辅导班，从小学到高中，你一直在自己的小圈子里徘徊，连火车票都不会自己买，而人家已经坐上了出国的航班，考过了雅思，托福，甚至可以和外国人自由地交谈，你拿什么跟人家比。我这样想，一边想一边走，越走越烦躁，直到一个人潮拥挤的十字路口，红灯亮起，我止步，抬起头。我看着晚高峰时刻的车水马龙，人们走向我，然后路过我，仿佛浩瀚星河里一颗颗暗淡的星辰。他们神色匆匆，各自奔忙，拿着两三（千）元钱的薪水，过着周而复始，循规蹈矩的生活，一眼，就能看到死。那种深邃，那种空洞，让我第一次感受到恐惧，那是对未来的无力，因为我在他们身上看到了，自己将来的样子，多年之后，我的父母苍老，姑娘离去，理想破碎，一败涂地，什么曾经的骄傲，什么家族的希望，我就注定了，只能是个普通人。我很失落，非常失落，从那以后，我会刻意回避和一些同学的交往，他们光线亮丽生而不凡，而我，只有一身锈。每当我听到有同学在聊，暑假又去了哪里，在北京，在上海又有什么好玩的事情，我都会心头一紧，然后找借口离开，我把自己活成一个普通人的样子。&lt;br&gt;
+直到有一天，我遇到了生命中的贵人，它将我从无限的阴暗与黑暗中拉了出来。那天我正在做作业，突然听到客厅的电视里，他不甘平淡，他的世界观正在悄悄变化，他心理最柔软的那部分被触及，他的眼里，就出现了光。&lt;br&gt;
+那段震彻灵魂的陶笛声，让我变得坚韧，我得走出去，我必须走出去，就为了那些我从未见过的风景，那些还在远方等我的，更优秀的人，从此，那个男孩变了，他切断了一切无用的社交，不断逢人就说自己的故事，恐惧，自卑和阴霾都已散去，他的眼里只剩下自信和坦荡。&lt;br&gt;
+如今，在衡中，这个更广阔的舞台上，我和所有的同学一起，带着必胜的信念向前走，我们在努力活成曾被给予厚望的样子。这群志同道合的人，常在一起谈理想，谈未来，谈着自己和他们的世界。我和他们开玩笑说，我就是一只来自乡下的土猪，也要立志，去拱大城市里的白菜。&lt;br&gt;
+夏夜的傍晚，手臂总是粘我的卷子。今年，我高三，高考报名之后就意味着，我们不再是学生，而是考生，我们拼了命地学，没日没夜地和时间竞赛，我们早上醒来的第一件事，就是大声喊出自己的理想。有人说，我的理想是斯坦福，有人说，我要考清华大学金融专业。有人说，我的目标是北京大学中文系，我们为此沉迷，为此消瘦，这种感觉让我们疯狂。反观，那些无故诋毁我们的人。你见过衡中高三，凌晨五点半时的样子吗，你以为我们每天天不亮，就奔向操场，一边奔跑一边呼喊是为了什么，是假装吗，是作秀吗，我们是为了改命啊。&lt;br&gt;
+衡中的考生，河北省的考生，他们都是来自普通家庭的孩子，他们身上都肩负着整个家族几个世代的期望，他们不是高考机器，他们只是一群穷人家的孩子，也想要成为父母的骄傲，想要让他爱的人，都能更精彩地活下去，活着，他们有什么错。他们，就是你啊。我们和全中国所有为了梦想而不顾嘲笑，努力奔跑的人一样。我们越安静，越平和，越淡定，越忍耐，越无所畏，我们眼里深藏的汹涌就越沸腾。这是我们自己选择的路，从来不需要任何人指手画脚，我们也一样能够，走等很好。在小小的世界里，有一个大大的你，你可以选择去做一个平凡的人，但请你千万不要去做一个，平庸的人，做一个普通人。我知道有一种落差叫没能达到自己最初的期望，还辜负了曾经受过的苦难。&lt;br&gt;
+就我而言，我承受不了这样的落差，我还是愿意幻想，高考结束的那个下午，最后一科收卷铃声响起，我放下笔，侧过身，倚在墙上，转头看向窗外明媚的阳光和操场，那浮动着的金色告诉我，一切都结束了。有人走过来拍拍我的肩，对我笑着说，世界灿烂盛大，欢迎回家。&lt;/p&gt;
+">张锡峰励志演讲</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/notice/"" data-c="
+          &lt;p&gt;尊敬的访客们，&lt;br&gt;
+我是Codepark（https://xuhaozhao123.github.io）的站长Hazel。今天，我必须带来一则可能会让许多忠实读者感到遗憾的消息。经过深思熟虑，我决定暂时（直到2028年）停止更新我们的网站。这个决定并非轻率，而是基于当前的实际情况和未来的规划。在此，我想向大家详细说明停更的原因、影响以及我们未来的展望。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;首先，我要感谢每一位访问过Codepark的朋友。自从网站成立以来，我们一直致力于提供高质量的编程资源和教程，帮助编程爱好者和学习者提升技能。在这个过程中，我们收获了无数宝贵的反馈和支持，这些都是我们前进的动力。&lt;br&gt;
+然而，随着时间的推移，网站的维护和发展面临着新的挑战。其中最突出的问题就是搜索引擎排名的不断下降。在互联网信息爆炸的今天，一个网站的可见度和搜索排名直接关系到它的生存和发展。不幸的是，尽管我们尝试了各种优化措施，Codepark的排名仍然不尽如人意。这不仅影响了新访客的流入，也对我们的士气造成了打击。&lt;br&gt;
+除此之外，作为一名全职学生，我发现自己越来越难以在学业和网站之间找到平衡。学习的压力和对成绩的追求，使得我不得不重新评估自己的时间和精力分配。在这样的背景下，我不得不做出一个艰难的决定——暂时停止更新Codepark。&lt;br&gt;
+我知道，这对于期待新内容的用户来说是一个坏消息。但请相信，这并不是一个永久的告别。停更期间，我将专注于我的学业，确保能够专注学习。同时，在未来我也会探索新的方法来提高网站的搜索引擎排名，以便在未来能够以更强的态势回归。&lt;br&gt;
+在这段时间里，网站将不再发布新的内容，但我们之前的文章依然可以访问。如果你在学习过程中遇到任何问题，或者需要帮助，欢迎通过现有的联系方式与我联系。我会尽我所能提供帮助。&lt;br&gt;
+未来，我希望能够带着更多的知识和经验回到Codepark。我相信，通过不断的学习和实践，我们可以使网站变得更加强大，更好地服务于编程社区。&lt;br&gt;
+在此，我再次对因停更给您带来的不便表示诚挚的歉意，并感谢您的理解和支持。请保持关注，因为这只是暂时的分别，更好的Codepark将会在未来等待着您的归来。&lt;br&gt;
+最后，愿我们都能在自己的道路上不断前行，无论遇到多少困难，都不放弃追求知识和成长。&lt;br&gt;
+谨此，&lt;br&gt;
+Codepark站长&lt;br&gt;
+Hazel&lt;/p&gt;
+">通知：Codepark站长Hazel关于网站暂时停更的说明</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/githubpages/"" data-c="
+          &lt;p&gt;作为一名技术爱好者，相信各位大神都有把自己学习技术的心得或者一些踩坑、易错的过程记录下来的需求，首选的是技术平台，但高昂的服务器与域名费用往往使得我们(ziji)难以承担。今天就来教大家免费搭建一个自己的个人博客平台。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Github大家都有听过，甚至是经常用，除了可以作为开源源码的交流平台，还提供了搭建博客的功能。目前一些大佬、老师的博客用的就是Github搭建的。&lt;br&gt;
+我的个人博客，欢迎访问https://xuhaozhao123.github.io&lt;br&gt;
+&lt;img src=&#34;https://copa.us.kg/post-images/1714658701938.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+主流的博客框架Gridea、Hexo、GitBook、VuePress、dumi...如何选择？&lt;br&gt;
+我们写个人博客的初心大致会有这些：记录踩过的坑、&lt;br&gt;
+解决过的难题、&lt;br&gt;
+建立自己的知识库&lt;br&gt;
+表达能力观点、内容输出、                                                          分享、讨论&lt;br&gt;
+以及改进建立个人影响力...&lt;br&gt;
+我们对个人博客平台的要求：随时随地可编辑良好的 Markdown 语法支持&lt;br&gt;
+避免严格的内容审核，良好的 SEO，可以专注于内容的输出。&lt;br&gt;
+此处我推荐新手使用gridea简单易上手（大神可使用hexo功能更完善，主题更多），无需安装配置Git,Node.js等环境。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;注册 Github并登录&lt;br&gt;
+既然提到了 Github Page ，首先就得 注册自己的Github账号https://github.com/signup 并登录 。&lt;/li&gt;
+&lt;li&gt;创建自己的仓库&lt;br&gt;
+注册之后，接下来就要创建自己的仓库https://github.com/new， 首先点击【New】或访问链接&lt;br&gt;
+在Repository name中填写【你的用户名.github.io】（两边无【】此处仅为了强调）&lt;br&gt;
+下方需要选择Public公开否则将无法访问。&lt;/li&gt;
+&lt;li&gt;创建完成之后，点击进入你的仓库项目，依次点击【Settings】→ 【Pages】→【Deploy from a branch】，并选择【Github Action】（作此步是方便为了后期可以更换框架来改善自己的博客网页）&lt;/li&gt;
+&lt;li&gt;申请 Personal access token（⚠️⚠️Token 值要保存好）接下来我们要申请 Personal access token，这样 Gridea 才能有权限将网站文件推送到你的仓库中。 我不直接给出申请 token 的链接，为了大家以后忘了自己还能找到该功能。 我们按照下图标的顺序，点击 「右上角自己的头像右边的小箭头」→ 「Settings」→ 「Developer settings」我们起个名字（或者说是备注），说明这个 token 是用来干什么的。token 的权限我们只选择 Repo。申请成功，会给你一串数字 + 字母的信息，这个就是 Token，我们一定要保存好！后面的配置中我们会用到。&lt;/li&gt;
+&lt;li&gt;配置Grideagithub免登录下载地址https://github.com/getgridea/gridea/releases&lt;br&gt;
+gitee高速需登录下载地址https://gitee.com/mirrors/gridea&lt;br&gt;
+下方选择GithubPages&lt;br&gt;
+域名一般写【你的用户名.github.io】（两边无【】此处仅为了强调）当然你也可以使用自定义域名，可自行百度&lt;br&gt;
+仓库：你的静态文件存放的仓库（例如：用户名.github.io ）&lt;br&gt;
+分支：你的 Github Pages 对应的分支（例如：master 或 gh-pages）&lt;br&gt;
+用户名：仓库所属用户的用户名（通常就是你的 Github 账号的昵称）&lt;br&gt;
+邮箱：Git 推送时使用的邮箱（通常就是你的 Github 账号的邮箱）Token: Git 推送时需要的 Token，用来向 Github 提交构建后的文件 这里的 token 就是之前申请的 Github personal access tokens&lt;br&gt;
+填写上面的信息后，点击 「检测远程连接」 按钮，如果提示 「远程连接成功」 那就 ok 啦～&lt;br&gt;
+之后可以写文章并预览，同步。&lt;br&gt;
+如果本文章访问量达到500，则我会再写一篇关于如何自定义主题和美化的文章，感谢大家支持。&lt;br&gt;
+参考资料：&lt;br&gt;
+1.【zhuanlan.zhihu.com/p/385692707】&lt;br&gt;
+2.【zhuanlan.zhihu.com/p/686132693】&lt;br&gt;
+3.【zhuanlan.zhihu.com/p/392994381】&lt;/li&gt;
+&lt;/ol&gt;
+">超详细！使用github免费搭建个人博客</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/evolution-host-freevps/"" data-c="
+          &lt;p&gt;Evolution Host vps是可以免费申请的，无需信用卡，也不需要注册，只需要简单发送一封包含自己网站地址的邮件，Evolution Host需要评估之后会给你开通一台永久免费的vps。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;小徐目前已经进行测试，免费期限：永久（需要在网站一直挂着 Evolution Host的品牌！）这篇文章就来分享下申请的过程。&lt;br&gt;
+1、申请&lt;br&gt;
+官网：https://evolution-host.com/&lt;br&gt;
+申请地址：https://evolution-host.com/free-vps.php&lt;br&gt;
+&lt;img src=&#34;https://copa.us.kg/post-images/1714191200241.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+在申请页面提交邮箱、网址和简介，简介尽量描述与服务器相关的内容。&lt;/p&gt;
+&lt;p&gt;然后就需要耐心的等待，毕竟美国的时区不一样，也就是说，一般你今天申请了，等收到回复就已经是第二天了。同时需要注意的是周六周日他们是不受理此类事情的，所以要注意这个。&lt;/p&gt;
+">Evolution Host 免费VPS 申请</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/web-xing-neng-you-hua-de-quan-zhan-shi-jiao-su-du-yu-yong-hu-ti-yan-de-gong-tong-zhui-qiu/"" data-c="
+          &lt;p&gt;在数字时代，用户对网页加载速度和交互响应性的期待不断提高。对于全栈开发者而言，提升Web性能不仅是技术挑战，更是提供卓越用户体验的关键。本文将从全栈的角度探讨如何优化Web性能，包括前端、后端以及数据库等层面的策略。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;前端优化&lt;/p&gt;
+&lt;p&gt;在前端，性能优化的关键在于减少资源的大小和提高资源的加载速度。这可以通过多种方法实现：&lt;/p&gt;
+&lt;p&gt;代码分割（Code Splitting）：将应用拆分成更小的代码块，按需加载，减少初始加载时间。&lt;br&gt;
+懒加载（Lazy Loading）：对于图片和其他媒体资源，只有当它们滚动到视窗中时才开始加载。&lt;br&gt;
+资源压缩（Asset Minification）：通过工具如UglifyJS和CSSNano压缩JavaScript和CSS文件，减少传输大小。&lt;br&gt;
+缓存利用（Caching）：利用浏览器缓存存储静态资源，减少重复加载。&lt;br&gt;
+服务端渲染（SSR）：对于React和Angular等框架，服务端渲染可以加快首屏加载速度。&lt;br&gt;
+后端优化&lt;/p&gt;
+&lt;p&gt;后端性能优化关注于服务器的响应时间和并发处理能力：&lt;/p&gt;
+&lt;p&gt;高效的请求处理：使用高效的路由和控制器，减少不必要的中间件。&lt;br&gt;
+数据库优化：优化查询，使用索引，以及选择性能更好的数据库系统。&lt;br&gt;
+缓存策略：使用Redis或Memcached等缓存系统来存储热数据，减少数据库访问。&lt;br&gt;
+负载均衡：通过负载均衡器分发请求，提高系统的可用性和扩展性。&lt;br&gt;
+数据库优化&lt;/p&gt;
+&lt;p&gt;数据库是Web应用的性能瓶颈所在，优化数据库性能通常涉及：&lt;/p&gt;
+&lt;p&gt;查询优化：分析和优化慢查询，确保使用正确的索引。&lt;br&gt;
+分区和分片：根据数据访问模式对数据进行分区，或者使用分片来分布负载。&lt;br&gt;
+读写分离：通过分离读操作和写操作到不同的数据库实例来提高性能。&lt;br&gt;
+内容分发网络（CDN）&lt;/p&gt;
+&lt;p&gt;使用CDN可以将静态资源部署到全球的多个数据中心，从而缩短资源与用户之间的距离，加快加载速度。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;Web性能优化是一个持续的过程，需要全栈开发者在多个层面上不断调整和改进。通过上述策略的实施，开发者可以显著提高网站的速度和用户体验，从而在竞争激烈的市场中脱颖而出。随着技术的不断进步，新的优化工具和实践也将不断出现，为全栈开发者提供更多的选择和可能性。&lt;/p&gt;
+">Web性能优化的全栈视角：速度与用户体验的共同追求</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/kua-ping-tai-yi-dong-ying-yong-kai-fa-quan-zhan-cheng-xu-yuan-de-flutter-yu-react-native-tan-suo/"" data-c="
+          &lt;p&gt;在当今技术快速演进的时代，移动应用已成为企业与用户互动的重要渠道。对于全栈开发者来说，能够高效地为iOS和Android两大主流平台构建应用是至关重要的。本文将探讨两种流行的跨平台移动应用开发框架——Flutter和React Native——并分析它们如何帮助全栈开发者实现这一目标。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Flutter：Google的UI工具包&lt;/p&gt;
+&lt;p&gt;Flutter是由Google推出的开源UI工具包，它允许开发者使用单一的代码库来为iOS和Android平台构建高性能、美观的应用。Flutter的优势在于其提供的组件不仅美观而且速度快，因为它直接与设备的GPU进行通信，从而实现接近原生应用的性能。&lt;/p&gt;
+&lt;p&gt;Flutter的另一个优点是它的热重载功能，这使得开发者可以在应用运行时进行更改并立即看到结果，极大提高了开发效率。此外，Flutter拥有丰富的组件库和强大的社区支持，使得开发者可以轻松地构建出复杂的界面和动画效果。&lt;/p&gt;
+&lt;p&gt;React Native：Facebook的跨平台解决方案&lt;/p&gt;
+&lt;p&gt;React Native由Facebook推出，是一个用JavaScript编写应用的框架，同样支持iOS和Android平台。它的核心优势在于采用了React——一个广受欢迎的JavaScript库，这使得前端开发者可以很容易地转向移动应用开发。&lt;/p&gt;
+&lt;p&gt;React Native的组件都是基于原生UI组件构建的，这意味着应用的外观和感觉几乎与原生应用无异。它还提供了桥接机制，允许开发者在必要时使用原生代码，从而充分利用每个平台特有的功能。&lt;/p&gt;
+&lt;p&gt;全栈开发者的选择&lt;/p&gt;
+&lt;p&gt;对于全栈开发者来说，选择Flutter或React Native取决于多个因素。如果团队对Dart语言和Google的产品有偏好，或者需要构建具有复杂动画和高度定制UI的应用，那么Flutter可能是更好的选择。而如果团队已经熟悉JavaScript和React，或者需要快速迭代和频繁发布新功能，那么React Native可能更适合。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;Flutter和React Native都为全栈开发者提供了强大的工具来构建跨平台移动应用。通过理解这两个框架的优势和限制，开发者可以根据项目需求和团队技能做出明智的选择。随着移动技术的不断进步，这些框架将继续演化，为开发者提供更多的可能性和灵活性。&lt;/p&gt;
+">跨平台移动应用开发：全栈程序员的Flutter与React Native探索</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/yun-ji-suan-yu-quan-zhan-ji-neng-awsazure-yu-gcp-fu-wu-mo-xing-bi-jiao/"" data-c="
+          &lt;p&gt;在当今的技术环境中，云计算已成为企业IT架构不可或缺的一部分。Amazon Web Services (AWS)、Microsoft Azure和Google Cloud Platform (GCP)是市场上最流行的三大云服务提供商。每个平台都有其独特的服务模型和功能，为全栈开发者提供了广泛的工具和资源。本文将比较这三家巨头的服务模型，并特别强调GCP的优势。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;AWS&lt;/p&gt;
+&lt;p&gt;作为市场的领导者，AWS提供了一个广泛的服务范围，包括计算、存储、数据库、分析、机器学习和许多其他服务。它的服务模型以灵活性和广泛的选项而闻名，这使得开发者可以根据自己的需求定制解决方案。然而，这种广泛性可能会带来复杂性，对于新手来说可能有一定的学习曲线。&lt;/p&gt;
+&lt;p&gt;Azure&lt;/p&gt;
+&lt;p&gt;Microsoft Azure以其与Microsoft生态系统的紧密集成而受到青睐。它提供了类似于AWS的服务范围，并且特别强化了在企业级应用、大数据和AI领域的服务。Azure的服务模型注重于提供一个统一的平台，使开发者能够轻松地构建、部署和管理应用程序。&lt;/p&gt;
+&lt;p&gt;GCP&lt;/p&gt;
+&lt;p&gt;Google Cloud Platform (GCP) 是一个相对较新的竞争者，但它迅速以其先进的技术和强大的数据分析能力获得了市场份额。GCP的服务模型专注于性能、安全性和数据处理能力。它提供了高度优化的计算引擎、大数据工具和机器学习服务，这些都是由Google的核心业务——搜索、广告和YouTube等驱动的。&lt;/p&gt;
+&lt;p&gt;GCP在多个方面展现了其卓越的优势。首先，它在数据分析和机器学习方面的强大能力是无与伦比的。借助于Google的先进技术，GCP提供了BigQuery、Pub/Sub和其他高性能的数据服务，这些服务使得处理大规模数据集变得快速而简单。此外，Google的TensorFlow和Cloud AutoML等工具为开发者提供了强大的机器学习平台。&lt;/p&gt;
+&lt;p&gt;其次，GCP的网络性能和全球基础设施也是其突出的特点。Google拥有世界上最先进的网络之一，保证了低延迟和高吞吐量。此外，GCP的全球数据中心网络确保了应用可以靠近用户部署，从而提供更快的服务。&lt;/p&gt;
+&lt;p&gt;最后，GCP在安全性和合规性方面的投入值得称赞。它提供了多层次的安全措施，包括物理安全、网络安全和数据加密。此外，GCP符合多种国际和行业特定的合规标准，这对于需要遵守严格规定的企业来说是一个巨大的优势。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;虽然AWS、Azure和GCP各有千秋，但GCP在数据分析、机器学习、网络性能以及安全性方面的独特优势使其在云计算市场中独树一帜。对于全栈开发者来说，选择GCP意味着可以利用Google的最新技术来构建高性能、安全的应用程序。随着云计算技术的不断进步，GCP无疑将继续在创新的道路上前行，为开发者提供更多的可能性。&lt;/p&gt;
+">云计算与全栈技能：AWS、Azure与GCP服务模型比较</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/rong-qi-hua-yu-quan-zhan-kai-fa-docker-yu-kubernetes-zai-duo-ping-tai-bu-shu-zhong-de-jiao-se/"" data-c="
+          &lt;p&gt;容器化与全栈开发：Docker与Kubernetes在多平台部署中的角色&lt;/p&gt;
+&lt;p&gt;在当今快速发展的技术环境中，全栈开发者需要应对各种不同平台和技术栈的挑战。容器化技术的出现，特别是Docker和Kubernetes，为开发者提供了一种高效、可靠的解决方案，以实现跨平台的一致性部署和运维。本文将深入探讨这些工具在全栈开发中的应用，并提供实践指导。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Docker：容器化的基础&lt;/p&gt;
+&lt;p&gt;Docker是现代容器化技术的代表，它允许开发者将应用程序及其依赖打包成一个标准化的单元，称为容器。这个容器可以在任何支持Docker的环境中运行，确保了应用无论在哪里部署都表现出相同的行为。&lt;/p&gt;
+&lt;p&gt;对于全栈开发者来说，Docker的使用简化了从开发到生产的流程。开发者可以在本地构建一个与生产环境几乎完全相同的容器，这样就可以在开发过程中避免“在我机器上可以运行”的问题。此外，Docker的分层存储和镜像缓存机制也大大加快了构建和部署的速度。&lt;/p&gt;
+&lt;p&gt;Kubernetes：容器编排的标准&lt;/p&gt;
+&lt;p&gt;虽然Docker解决了单个容器的管理问题，但在大规模部署时，需要管理成百上千个容器。这就是Kubernetes发挥作用的地方。Kubernetes是一个开源的容器编排平台，它可以管理容器的生命周期，包括部署、扩展和自我修复等。&lt;/p&gt;
+&lt;p&gt;在全栈开发中，Kubernetes提供了强大的功能来处理复杂的部署需求。例如，它可以通过复制控制器（ReplicaSets）和部署（Deployments）来管理多个容器副本。服务（Services）抽象使得内部和外部通信变得更加简单，而配置文件（ConfigMaps）和秘密（Secrets）则用于管理应用配置和敏感数据。&lt;/p&gt;
+&lt;p&gt;多平台部署的最佳实践&lt;/p&gt;
+&lt;p&gt;在多平台部署中，Docker和Kubernetes的结合提供了无与伦比的灵活性和效率。以下是一些最佳实践：&lt;/p&gt;
+&lt;p&gt;环境一致性：使用Dockerfile来定义应用环境，确保开发、测试和生产环境的一致性。&lt;br&gt;
+无状态应用：设计应用为无状态，以便利用Kubernetes的自动扩展和自我修复能力。&lt;br&gt;
+配置管理：使用Kubernetes的ConfigMaps和Secrets来管理应用配置，避免硬编码。&lt;br&gt;
+滚动更新：利用Kubernetes的滚动更新（Rolling Updates）策略来减少部署时的停机时间。&lt;br&gt;
+持续集成/持续部署（CI/CD）：将Docker和Kubernetes集成到CI/CD流程中，实现自动化的构建、测试和部署。&lt;br&gt;
+结语&lt;/p&gt;
+&lt;p&gt;Docker和Kubernetes已经成为现代全栈开发的重要工具，它们提供了一种高效、可靠的方式来部署和管理应用。通过掌握这些容器化技术，全栈开发者可以更好地应对多平台部署的挑战，提高生产力，同时确保应用的稳定性和可扩展性。随着云计算和微服务的不断发展，容器化将继续在软件开发中扮演关键角色。&lt;/p&gt;
+">容器化与全栈开发：Docker与Kubernetes在多平台部署中的角色</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/xian-dai-qian-duan-ji-zhu-zhan-gai-lan-reactvue-yu-angular-bi-jiao-yan-jiu/"" data-c="
+          &lt;p&gt;在当今多变的Web开发世界中，前端技术正快速发展，新的框架和库不断涌现。然而，React、Vue和Angular由于其独特性和强大的社区支持，已经成为了最受欢迎的三大前端框架。本文将深入探讨这三个技术栈的特性，并对其进行比较研究。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;React&lt;/p&gt;
+&lt;p&gt;React由Facebook开发并维护，是一个用于构建用户界面的JavaScript库。它的核心特性是组件化，允许开发者通过构建可重用的UI组件来构建应用程序。React的虚拟DOM（Virtual DOM）机制优化了页面渲染过程，提高了性能。此外，React拥有丰富的生态系统，包括状态管理工具Redux和用于路由的React Router。&lt;/p&gt;
+&lt;p&gt;Vue&lt;/p&gt;
+&lt;p&gt;Vue是由前Google工程师尤雨溪开发的渐进式JavaScript框架。与React类似，Vue也采用组件化的开发方式，但其API设计更加简洁直观。Vue的核心库专注于视图层，同时它也提供了自己的路由系统（Vue Router）和状态管理方案（Vuex）。Vue的易学易用特性使其在开发者中广受欢迎。&lt;/p&gt;
+&lt;p&gt;Angular&lt;/p&gt;
+&lt;p&gt;Angular是由Google开发的一个开源Web应用框架，是这三者中最为“全包式”的框架。它包含了模板、依赖注入、端到端工具等一系列功能。Angular的学习曲线相比React和Vue来说更为陡峭，但它提供的完整性使得大型应用的开发更为规范化和有序。Angular的双向数据绑定和TypeScript的支持也是其显著特点。&lt;/p&gt;
+&lt;p&gt;性能对比&lt;/p&gt;
+&lt;p&gt;在性能方面，React、Vue和Angular都进行了优化以实现快速渲染和最小化与DOM的交互。React的虚拟DOM和高效的Diff算法在处理大量动态数据时表现出色。Vue的渲染速度通常非常快，尤其是在初始加载时。而Angular的Change Detection机制虽然强大，但在处理大型应用时可能会有性能上的挑战。&lt;/p&gt;
+&lt;p&gt;实践案例&lt;/p&gt;
+&lt;p&gt;在实际项目中，React、Vue和Angular都有广泛的应用。React因其灵活性和高性能被许多大型项目采用，如Instagram和Uber。Vue以其易用性和轻量级的特点在中小型项目中非常受欢迎。Angular则因为其全面的解决方案和强大的企业支持，常被用于大型企业级应用。&lt;/p&gt;
+&lt;p&gt;选择合适的框架&lt;/p&gt;
+&lt;p&gt;选择最合适的前端框架取决于项目需求、团队熟悉度以及个人偏好。如果项目需要高度定制化和性能优化，React可能是最佳选择。对于寻求快速开发和易于理解的项目，Vue可能更合适。而对于需要全面解决方案和严格规范的大型项目，Angular可能是最佳选择。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;React、Vue和Angular都是强大的前端框架，各有优势和适用场景。在选择技术栈时，应该考虑到项目的特定需求、团队的技能水平以及长期的维护成本。无论选择哪个框架，最重要的是保持一致性和可维护性，同时确保团队成员能够高效协作。随着技术的不断发展，这些框架也会继续演进，为我们提供更多的可能性。&lt;/p&gt;
+">现代前端技术栈概览：React、Vue与Angular比较研究</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/qian-hou-duan-fen-chi-vs-quan-zhan-yi-ti-jia-gou-yan-bian-de-tan-tao-yu-shi-jian/"" data-c="
+          &lt;p&gt;在软件开发的历史长河中，技术架构经历了多次变革，每一次变革都旨在解决特定时代的问题。本文将探讨前后端分离和全栈一体两种架构的特点、优缺点，以及在不同场景下的最佳实践。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;全栈一体架构&lt;/p&gt;
+&lt;p&gt;传统的Web应用大多采用全栈一体的架构模式，即前端和后端代码紧密耦合在一起。在这种模式下，开发者通常使用服务器端渲染（SSR）技术，如PHP的Lavarel或Python的Django等框架，来同时处理页面逻辑和用户界面。这种架构的优势在于简单直接，适合小型项目和快速原型开发。&lt;/p&gt;
+&lt;p&gt;然而，随着Web应用复杂度的增加，全栈一体架构的缺点逐渐显现。最主要的问题是它限制了前端和后端的独立性，导致任何改动都需要前后端同时进行，增加了部署的复杂性和团队协作的难度。此外，由于所有内容都在服务器端渲染，响应时间较长，不利于用户体验。&lt;/p&gt;
+&lt;p&gt;前后端分离架构&lt;/p&gt;
+&lt;p&gt;随着现代Web应用的发展，前后端分离架构应运而生。这种架构的核心思想是将用户界面（UI）与后端的数据和业务逻辑彻底分开。前端负责展示和交互，使用框架如React、Vue或Angular来构建单页应用（SPA），而后端则通过API提供服务。这种模式的优势在于解耦，允许前端和后端独立开发、测试和部署，提高了开发效率和灵活性。&lt;/p&gt;
+&lt;p&gt;前后端分离还带来了其他一些好处。例如，由于采用了客户端渲染，用户的交互体验更加流畅。同时，安全性也得到了提升，因为可以通过CORS等策略来限制不同源的请求。此外，前后端分离架构使得前端能够更容易地采用新的JavaScript技术和工具，而后端则可以专注于优化数据处理和API性能。&lt;/p&gt;
+&lt;p&gt;架构选择的最佳实践&lt;/p&gt;
+&lt;p&gt;尽管前后端分离架构在许多现代Web应用中占主导地位，但全栈一体架构仍然有其适用场景。对于小规模项目或者需要快速迭代的原型，全栈一体架构可能更为合适，因为它简化了开发流程并减少了初始设置的复杂性。&lt;/p&gt;
+&lt;p&gt;在选择架构时，应该考虑项目的具体需求。如果项目对用户体验有较高要求，或者需要支持多种客户端（如Web、移动应用等），前后端分离可能是更好的选择。如果项目规模较小，团队成员较少，且交付时间紧迫，全栈一体架构可能更符合需求。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;前后端分离和全栈一体架构各有优势，没有绝对的好与坏。作为开发者，理解每种架构的特点和适用场景，并根据项目的具体需求做出明智的选择，是实现高效开发和优质产品的关键。随着技术的不断进步，架构的选择也可能随之变化，因此持续学习和适应新技术是每个软件工程师必经的道路。&lt;/p&gt;
+">前后端分离 vs. 全栈一体：架构演变的探讨与实践</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/quan-zhan-kai-fa-ji-chu-cong-qian-duan-dao-hou-duan-de-he-xin-ji-zhu-shu-li/"" data-c="
+          &lt;p&gt;全栈开发基础：从前端到后端的核心技术梳理&lt;/p&gt;
+&lt;p&gt;在现代软件开发领域，全栈开发者越来越受到重视。他们能够处理从用户界面到服务器端逻辑、数据库管理以及系统部署等一系列工作。为了成为一名合格的全栈工程师，理解各个层面上的技术是必不可少的。本文将深入探讨全栈开发中的核心前端和后端技术。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;前端技术概览&lt;/p&gt;
+&lt;p&gt;在前端开发领域，最基本的构成是HTML、CSS和JavaScript。HTML负责页面结构，它是网页内容的骨架；CSS负责页面样式，它为网页注入视觉风格；JavaScript则负责交互行为，它让网页变得动态且互动性强。&lt;/p&gt;
+&lt;p&gt;随着技术的发展，前端开发也涌现出了许多框架和库，如React、Vue和Angular。这些框架和库提供了更高效的开发模式，如组件化、模块化等，大大提高了代码的复用性和可维护性。&lt;/p&gt;
+&lt;p&gt;后端技术概览&lt;/p&gt;
+&lt;p&gt;对于后端开发而言，选择合适的语言和框架至关重要。主流的后端语言包括Java、Python、Ruby、PHP、Node.js等。每种语言都有其独特的优势，例如，Node.js以非阻塞I/O著称，适合处理大量并发请求；Python以其优雅简洁的语法和强大的科学计算库而受到青睐。&lt;/p&gt;
+&lt;p&gt;在框架方面，Django（Python）、Spring Boot（Java）、Ruby on Rails（Ruby）和Laravel（PHP）等都是非常流行的选择。这些框架提供了丰富的功能，如路由处理、模板引擎、ORM以及中间件支持，极大地简化了开发过程。&lt;/p&gt;
+&lt;p&gt;数据库技术&lt;/p&gt;
+&lt;p&gt;数据库是任何应用程序不可或缺的一部分。关系型数据库如MySQL和PostgreSQL因其严格的数据结构和ACID事务特性而被广泛使用。而非关系型数据库，如MongoDB和Redis，由于其灵活性和易于扩展的特点，也越来越受到开发者的喜爱。&lt;/p&gt;
+&lt;p&gt;全栈开发的综合应用&lt;/p&gt;
+&lt;p&gt;作为全栈开发者，了解如何将这些技术综合运用到实际项目中是非常重要的。前端技术决定了用户直接与之互动的界面的质量，而后端技术则确保了数据处理和业务逻辑的可靠性。数据库的设计和优化直接影响了应用的性能和可维护性。&lt;/p&gt;
+&lt;p&gt;此外，全栈开发者还需要熟悉版本控制工具（如Git）、测试框架、持续集成/持续部署（CI/CD）流程、云服务（如AWS、Azure或Google Cloud Platform）等。这些技能共同构成了一个稳固的全栈开发基础。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;p&gt;全栈开发不仅仅是技术的堆砌，更是对整个软件开发周期的深刻理解。掌握这些核心技术，并不断学习新的工具和语言，将使开发者不仅能够构建出色的产品，还能快速适应不断变化的技术环境。全栈开发是一个持续学习和实践的过程，而这个过程本身就是一种成就。&lt;/p&gt;
+">全栈开发基础：从前端到后端的核心技术梳理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/zai-debian-xi-tong-an-zhuang-nodejs-18/"" data-c="
+          &lt;p&gt;在 Debian 系统上，我们可以使用其内置的包管理器对其安装 Node.js，但是官方包管理器的 Node.js 版本实在是太低了。我们就得需要使用到 Node.js 官方的安装脚本，来对其安装。这篇教程就来记录下 Debian 系统安装 Node.js 的操作步骤&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;准备材料&lt;br&gt;
+Debian 系统的设备&lt;br&gt;
+安装步骤&lt;br&gt;
+SSH 登录进 VPS&lt;br&gt;
+输入以下命令&lt;br&gt;
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash -&lt;br&gt;
+apt-get install -y nodejs&lt;br&gt;
+sudo apt-get install yarn&lt;br&gt;
+输入 node --version 命令，查看 Node.js 版本为 18.x 即可&lt;/p&gt;
+">在 Debian 系统安装 Node.js 18</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/shi-yong-cmd-ming-ling-xing-zai-yuan-ban-windows-an-zhuang-cheng-xu-huan-jing-zhong-an-zhuang-xi-tong/"" data-c="
+          &lt;p&gt;本文将引导你使用 cmd 命令行，在原版 Windows 安装程序环境中安装系统&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;准备材料&lt;br&gt;
+Windows 安装镜像&lt;/p&gt;
+&lt;p&gt;部署步骤&lt;br&gt;
+在 Windows 安装程序页面中，使用 Shift + F10，打开命令行窗口&lt;/p&gt;
+&lt;p&gt;使用 diskpart 命令，运行 diskpart，然后运行 list disk 命令，可以获取系统中所有可用的磁盘：&lt;/p&gt;
+&lt;p&gt;输出示例如下：&lt;/p&gt;
+&lt;p&gt;磁盘 ###  状态           大小     可用     Dyn  Gpt&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;磁盘 0    联机              238 GB  1024 KB        *&lt;br&gt;
+磁盘 1    联机             1863 GB  1024 KB        *&lt;br&gt;
+磁盘 2    联机               29 GB      0 B&lt;br&gt;
+可在diskpart中依次运行以下命令，可以清空指定的磁盘：&lt;br&gt;
+select disk 磁盘编号&lt;br&gt;
+clean&lt;br&gt;
+注意，此操作不可撤销，清空之前请务必核实磁盘编号。&lt;/p&gt;
+&lt;p&gt;分区&lt;br&gt;
+简单GPT分区&lt;br&gt;
+依次运行以下命令，可以根据磁盘编号，在已清空的磁盘上新建一整个GPT分区：&lt;br&gt;
+select disk 磁盘编号&lt;br&gt;
+convert GPT&lt;br&gt;
+这里有一个大坑点。有一些版本的diskpart会自动创建一个MSR分区，而另一些版本（特别老或者特别新）则不会。MSR分区是微软的保留分区，虽然并不是必须的，但是为了兼容性，我们这里统一保留MSR分区。所以说运行完Convert GPT后，先看是否自动创建了MSR分区：&lt;br&gt;
+list partition&lt;br&gt;
+如果上面的结果显示有一个“保留分区”，则不需要额外创建MSR；如果显示没有分区，则我们手动创建一个16MB大小的MSR分区：&lt;br&gt;
+create partition MSR size=16&lt;br&gt;
+随后创建一个EFI引导分区，一个主分区，并指定EFI分区大小为100MB；分区完成后，EFI分区盘符为Z，主分区盘符为Y：&lt;br&gt;
+create partition EFI size=100&lt;br&gt;
+create partition primary&lt;br&gt;
+select partition 2&lt;br&gt;
+assign letter=Z&lt;br&gt;
+format fs=Fat quick&lt;br&gt;
+select partition 3&lt;br&gt;
+assign letter=Y&lt;br&gt;
+format fs=Ntfs label=&amp;quot;Windows&amp;quot; quick&lt;br&gt;
+简单MBR分区&lt;br&gt;
+依次运行以下命令，可以根据磁盘编号，在已清空的磁盘上新建新建一整个MBR分区，并将其标记为活动分区；分区完成后，主分区盘符为Y：&lt;/p&gt;
+&lt;p&gt;select disk 磁盘编号&lt;br&gt;
+convert MBR&lt;br&gt;
+create partition primary&lt;br&gt;
+select partition 1&lt;br&gt;
+assign letter=Y&lt;br&gt;
+format fs=Ntfs label=&amp;quot;Windows&amp;quot; quick&lt;br&gt;
+active&lt;br&gt;
+运行以下命令，可以根据WIM文件路径，获取其中可安装的系统列表：&lt;br&gt;
+dism /Get-WimInfo /WimFile:WIM文件路径&lt;br&gt;
+输出示例如下：&lt;/p&gt;
+&lt;p&gt;部署映像服务和管理工具&lt;br&gt;
+版本： 10.0.14393.0&lt;/p&gt;
+&lt;p&gt;映像的详细信息： G:/install.wim&lt;/p&gt;
+&lt;p&gt;索引： 1&lt;br&gt;
+名称： Windows 10 家庭版&lt;br&gt;
+描述： Windows 10 家庭版&lt;br&gt;
+大小： 15,951,995,942 个字节&lt;/p&gt;
+&lt;p&gt;索引： 2&lt;br&gt;
+名称： Windows 10 家庭单语言版&lt;br&gt;
+描述： Windows 10 家庭单语言版&lt;br&gt;
+大小： 15,952,043,368 个字节&lt;/p&gt;
+&lt;p&gt;索引： 3&lt;br&gt;
+名称： Windows 10 教育版&lt;br&gt;
+描述： Windows 10 教育版&lt;br&gt;
+大小： 16,168,710,050 个字节&lt;/p&gt;
+&lt;p&gt;索引： 4&lt;br&gt;
+名称： Windows 10 专业版&lt;br&gt;
+描述： Windows 10 专业版&lt;br&gt;
+大小： 16,168,589,078 个字节&lt;/p&gt;
+&lt;p&gt;索引： 5&lt;br&gt;
+名称： Windows 10 专业教育版&lt;br&gt;
+描述： Windows 10 专业教育版&lt;br&gt;
+大小： 16,168,637,438 个字节&lt;/p&gt;
+&lt;p&gt;索引： 6&lt;br&gt;
+名称： Windows 10 专业工作站版&lt;br&gt;
+描述： Windows 10 专业工作站版&lt;br&gt;
+大小： 16,168,673,510 个字节&lt;/p&gt;
+&lt;p&gt;操作成功完成。&lt;br&gt;
+其中，索引1到6代表了G:/install.wim中6个可以安装的系统。&lt;/p&gt;
+&lt;p&gt;运行以下命令，可以根据WIM文件路径和系统索引号，将系统部署在分区Y下，并生成Y:\Windows等文件夹：&lt;br&gt;
+dism /Apply-Image /ImageFile:WIM文件路径 /Index:系统索引号 /ApplyDir:Y:&lt;br&gt;
+运行以下命令，可以对Y:\Windows下安装的系统添加UEFI引导，EFI分区盘符为Z，适用于GPT分区&lt;br&gt;
+bcdboot Y:\Windows /s Z: /f UEFI&lt;br&gt;
+运行以下命令，可以对Y:\Windows下安装的系统添加BIOS引导，引导分区同样为Y，适用于MBR分区：&lt;/p&gt;
+&lt;p&gt;bcdboot Y:\Windows /s Y: /f BIOS&lt;br&gt;
+退出命令行及安装程序，重启即可&lt;/p&gt;
+">使用 cmd 命令行，在原版 Windows 安装程序环境中安装系统</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/前端学习/"" data-c="
+          &lt;p&gt;在当今的软件开发世界中，成为一名全栈开发者意味着你需要掌握从前端到后端的一系列技能。不仅需要了解如何构建用户界面，还要知道如何在服务器上处理数据和逻辑。本文将为你提供一个全面的指南，帮助你从基础概念开始，通过实际项目来深化你的前后端开发技能。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第一部分：前端开发基础&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在前端开发的领域，你将学习如何使用HTML、CSS和JavaScript创建网页和应用程序的用户界面。这些技术是任何Web开发者必备的基础工具。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;HTML5 - 网页内容的骨架：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;理解语义化标签，如&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;等。&lt;/li&gt;
+&lt;li&gt;学习表单元素，如&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;, 和&lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSS3 - 美化你的网页：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握布局技术，包括Flexbox和Grid系统。&lt;/li&gt;
+&lt;li&gt;理解盒模型，学会使用选择器和属性来样式化元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JavaScript - 网页交互的核心：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习变量、函数、对象和数组的基本概念。&lt;/li&gt;
+&lt;li&gt;掌握DOM操作，事件处理和异步编程（AJAX）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;第二部分：前端框架与库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为了提高开发效率和代码的可维护性，你需要学习当前流行的前端框架和库。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;React.js - 构建组件化的前端应用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习JSX语法和React组件生命周期。&lt;/li&gt;
+&lt;li&gt;理解状态管理和单向数据流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vue.js - 易学易用的轻量级框架：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握Vue的模板语法和组件系统。&lt;/li&gt;
+&lt;li&gt;学习Vuex进行状态管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Angular - 一个全面的解决方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;了解模块、组件和服务的概念。&lt;/li&gt;
+&lt;li&gt;学习依赖注入和使用TypeScript进行开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;第三部分：后端开发基础&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;后端开发涉及到服务器、应用程序和数据库的交互。这部分将介绍Node.js和Python两种流行的后端技术。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Node.js - 基于JavaScript的后端平台：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习Express框架来构建RESTful API。&lt;/li&gt;
+&lt;li&gt;理解中间件的概念和使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python - 多用途的编程语言：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用Django或Flask框架来创建Web应用。&lt;/li&gt;
+&lt;li&gt;学习如何处理HTTP请求和响应。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;第四部分：数据库技术&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;数据存储是任何应用程序的核心部分。你将学习关系型数据库和非关系型数据库的基本概念。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;SQL数据库 - 结构化查询语言：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习如何使用MySQL或PostgreSQL。&lt;/li&gt;
+&lt;li&gt;理解表、索引和查询优化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NoSQL数据库 - 灵活的数据存储：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;探索MongoDB和文档存储。&lt;/li&gt;
+&lt;li&gt;学习键值对存储如Redis的使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;第五部分：项目实战&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;理论知识是基础，但实践是最好的老师。通过实际项目来应用你的技能是巩固学习的关键。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;个人博客系统：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用React或Vue构建前端界面。&lt;/li&gt;
+&lt;li&gt;使用Node.js和Express或Python和Django作为后端。&lt;/li&gt;
+&lt;li&gt;实现用户认证、文章发布和评论功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电子商务网站：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建一个全栈应用，包括产品展示、购物车和支付流程。&lt;/li&gt;
+&lt;li&gt;使用SQL或NoSQL数据库存储产品信息和用户订单。&lt;/li&gt;
+&lt;li&gt;实现响应式设计以适应不同设备。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实时聊天应用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习WebSockets或使用第三方服务如Socket.IO。&lt;/li&gt;
+&lt;li&gt;构建一个支持即时消息交换的应用。&lt;/li&gt;
+&lt;li&gt;实现用户登录和个人资料管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;结语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;成为一名全栈开发者是一个持续学习和实践的过程。通过上述的学习路径和项目实战，你将能够建立起一套强大的前后端开发技能。记住，技术的海洋是广阔而深邃的，不断探索和实践将是你成长的关键。&lt;/p&gt;
+">构建全栈技能：前后端学习与项目实战的综合指南</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/bian-cheng-xue-xi/"" data-c="
+          &lt;p&gt;在当今互联网科技快速发展的时代，前端技术已经成为构建网站和移动应用的重要基础之一。作为想要进入前端领域的初学者，掌握前端技能并在实际项目中进行实践是至关重要的。本文将为您呈现一条从前端基础知识到项目实战的学习之路。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;一、前端技术概述&lt;/p&gt;
+&lt;p&gt;前端技术主要涉及网页的结构、样式和交互等方面。它通过使用HTML、CSS和JavaScript等核心技术，构建出用户界面（UI）并与用户进行交互。了解和掌握这些技术是成为一名出色的前端开发者的基础。&lt;/p&gt;
+&lt;p&gt;二、HTML：网页结构的基石&lt;/p&gt;
+&lt;p&gt;HTML（超文本标记语言）是构建网页结构的标准标记语言。它使用一系列的标签来定义页面的内容和元素布局，如标题、段落、链接、图像等。掌握常用的HTML标签及其属性，能够让您构建起基本的网页结构。&lt;/p&gt;
+&lt;p&gt;三、CSS：美化网页的艺术&lt;/p&gt;
+&lt;p&gt;CSS（层叠样式表）是用于描述网页样式和布局的样式表语言。通过CSS，您可以为网页中的元素设置颜色、字体、边距、背景等样式，以及实现响应式布局。掌握CSS的选择器、盒模型、定位和动画等概念，能够为您的网页增添美感和吸引力。&lt;/p&gt;
+&lt;p&gt;四、JavaScript：交互的灵魂&lt;/p&gt;
+&lt;p&gt;JavaScript是一种轻量级的编程语言，广泛用于网页开发，实现动态交互效果和前后端的数据通信。掌握JavaScript的基本语法、变量、函数、对象、事件处理等知识点，能够让您实现丰富的用户交互体验。&lt;/p&gt;
+&lt;p&gt;五、前端框架与工具&lt;/p&gt;
+&lt;p&gt;随着前端技术的不断发展，出现了许多优秀的前端框架和工具，如React、Vue、Angular等，它们提供了更高效的开发方式和丰富的组件库。同时，还有Webpack、Gulp等构建工具，以及Git版本控制等辅助工具，能够帮助您提升开发效率和团队协作能力。&lt;/p&gt;
+&lt;p&gt;六、项目实战：学以致用&lt;/p&gt;
+&lt;p&gt;理论知识的学习只是第一步，将所学知识应用于实际项目中是巩固理解和提升技能的关键。以下是一些建议的项目实战步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;选择一个合适的项目主题或参与开源项目。&lt;/li&gt;
+&lt;li&gt;设计项目的界面布局和交互需求。&lt;/li&gt;
+&lt;li&gt;使用HTML和CSS构建基本结构和样式。&lt;/li&gt;
+&lt;li&gt;通过JavaScript实现交互逻辑和数据展示。&lt;/li&gt;
+&lt;li&gt;引入前端框架或工具进行优化和构建。&lt;/li&gt;
+&lt;li&gt;测试和调试代码，确保功能正常运行。&lt;/li&gt;
+&lt;li&gt;部署上线，分享您的项目成果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;七、持续学习与社区参与&lt;/p&gt;
+&lt;p&gt;前端技术日新月异，保持学习和更新知识是非常重要的。参与前端社区，如GitHub、Stack Overflow、知乎等，与其他开发者交流经验和解决问题，能够拓宽视野并提升技能。&lt;/p&gt;
+&lt;p&gt;八、结语&lt;/p&gt;
+&lt;p&gt;前端学习及项目实战是一场充满挑战和乐趣的旅程。通过系统地学习前端技术，并将其应用于实际项目中，您将逐步成长为一名专业的前端开发者。不断积累经验，勇于探索新技术，相信您会在前端领域取得自己的成就。&lt;/p&gt;
+&lt;p&gt;希望本文对您的前端学习及项目实战有所帮助，祝您在前端开发之路上越走越远！&lt;br&gt;
+&lt;span style=&#34;font-size: 13px; color: #9CA1B3;&#34;&gt;生成更多类型文章、多风格配图、智能排版、一键发布至公众号平台等更多功能，请前往&lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;&lt;a href=&#34;https://turbodesk.xfyun.cn/home?channelid=xhcj&#34;&gt;官网下载&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+"> 前端学习及项目实战：从零到精通的探索之旅</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/qian-duan-xue-xi-zhang-wo-hu-lian-wang-de-shi-jue-yi-zhu/"" data-c="
+          &lt;p&gt;随着信息技术的发展，网页和应用程序已成为我们生活中不可或缺的一部分。而构建这些界面的关键，就是前端技术。那么，什么是前端呢？简单来说，前端是一个网站或应用的用户界面部分，它负责将信息以视觉的形式呈现给用户。因此，前端开发也被称为“客户端开发”，它是任何Web或移动应用的基础。&lt;br&gt;
+前端学习，不仅仅是为了掌握技术，更是为了理解如何通过代码创造美观、直观且用户友好的界面。接下来，我们将深入了解前端的核心组成，以及如何开始你的前端学习之旅。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;HTML：网页的骨架&lt;br&gt;
+HTML（超文本标记语言）是构成网页的基础。它定义了网页的结构，使用一系列标签来组织内容，如标题、段落、列表等。对于初学者来说，学习HTML是第一步，因为它是所有其他前端技术的基础。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSS：网页的样式&lt;br&gt;
+CSS（层叠样式表）负责网页的外观和布局。它允许开发者为HTML元素设置颜色、字体、间距和大小，以及其他视觉效果。掌握了CSS，你就可以使你的网页变得更加吸引人。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JavaScript：网页的行为&lt;br&gt;
+JavaScript是一种脚本语言，它使网页可以响应用户的操作，如点击、滚动和键盘输入。有了JavaScript，网页可以变得动态和交互式。这也是前端三剑客中最为复杂的一员，但同时也是最强大的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;框架与库：提升效率&lt;br&gt;
+随着技术的发展，许多工具和框架应运而生，它们可以帮助开发者更快地构建网站和应用。例如，React、Vue和Angular都是流行的前端框架。此外，还有各种库和插件，如jQuery，它们提供了预先编写的功能，可以简化开发过程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;响应式设计：适应各种设备&lt;br&gt;
+在移动设备日益普及的今天，响应式设计变得至关重要。它确保你的网站或应用在任何屏幕尺寸上都能正常工作。这不仅仅是关于调整布局，更是关于为用户提供无缝体验。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;性能优化与SEO：更快、更可见&lt;br&gt;
+为了让网站更快地加载并被搜索引擎更好地索引，性能优化和搜索引擎优化（SEO）是必不可少的。这涉及到减少文件大小、优化图片、使用缓存等技术。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;版本控制：Git与GitHub&lt;br&gt;
+在多人协作项目中，版本控制是必不可少的。Git是目前最流行的版本控制系统之一，而GitHub则是最大的开源代码托管平台。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试与调试：确保质量&lt;br&gt;
+为了保证代码的质量和稳定性，测试和调试是开发过程中的重要环节。学会使用浏览器的开发者工具进行调试，以及编写自动化测试，可以大大提高开发效率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;学习前端并不难，但要精通并不断创新却需要时间和实践。最好的学习方法是动手实践，不断地构建项目，从中学习新技能和解决问题的方法。随着时间的推移，你会发现自己不仅掌握了技术，更培养了一种将想法转化为可视化产品的能力。&lt;/p&gt;
+&lt;p&gt;最后，记住前端的世界是不断进化的。新的技术、工具和趋势总是在出现，所以保持好奇心和学习的热情是非常重要的。只有这样，你才能在这个快速变化的领域中保持领先。&lt;/p&gt;
+&lt;p&gt;总之，前端学习是一场既有趣又充满挑战的旅程。它不仅要求你具备扎实的技术基础，还要求你不断地探索、学习和创新。但只要你坚持下去，你将会掌握一种能够将想象变为现实的强大能力。&lt;/p&gt;
+">前端学习：掌握互联网的视觉艺术</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/qian-duan-xue-xi-cong-ling-ji-chu-dao-zhuan-ye-kai-fa-zhe/"" data-c="
+          &lt;p&gt;在数字化时代，互联网技术的飞速发展，使得前端开发成为了一个热门的职业方向。无论是想要转行的个人，还是即将毕业的学生，都希望通过学习前端技术，成为一名专业的前端开发者。那么，如何从零基础开始学习前端技术呢？本文将为您详细解析前端学习的全过程。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;一、前端开发的基础知识&lt;/p&gt;
+&lt;p&gt;前端开发，简单来说，就是使用HTML、CSS和JavaScript等技术，来构建和维护网站或Web应用的用户界面。因此，学习前端开发的第一步，就是要掌握这些基础知识。&lt;/p&gt;
+&lt;p&gt;HTML：HTML是一种标记语言，用于创建网页的结构。通过学习HTML，您将了解如何使用各种标签（如标题、段落、链接、图片等）来创建网页的基本结构。&lt;/p&gt;
+&lt;p&gt;CSS：CSS是一种样式表语言，用于描述网页的外观。通过学习CSS，您将了解如何设置颜色、字体、间距、布局等样式，以美化网页。&lt;/p&gt;
+&lt;p&gt;JavaScript：JavaScript是一种脚本语言，用于实现网页的交互功能。通过学习JavaScript，您将了解如何编写程序，以响应用户的操作，如点击按钮、填写表单等。&lt;/p&gt;
+&lt;p&gt;二、前端开发的进阶知识&lt;/p&gt;
+&lt;p&gt;掌握了基础知识后，您就可以开始学习一些进阶的前端技术了。&lt;/p&gt;
+&lt;p&gt;框架和库：为了提高开发效率，前端开发者通常会使用一些框架和库。例如，React是一个用于构建用户界面的JavaScript库；Vue是另一个流行的前端框架；Angular则是一个完整的前端开发框架，包括模板、依赖注入、端到端工具等。&lt;/p&gt;
+&lt;p&gt;版本控制：在团队开发中，版本控制是必不可少的。Git是目前最流行的版本控制系统，您需要学习如何使用Git进行代码的提交、合并、分支等操作。&lt;/p&gt;
+&lt;p&gt;测试：为了保证代码的质量，您需要学习如何编写和运行测试。例如，Jest是一个流行的JavaScript测试框架，可以用于编写单元测试和集成测试。&lt;/p&gt;
+&lt;p&gt;三、前端开发的实践项目&lt;/p&gt;
+&lt;p&gt;理论知识的学习是基础，但只有通过实践，才能真正掌握前端开发的技能。您可以选择一些项目，如个人博客、待办事项列表、天气应用等，进行实践。在这个过程中，您将学会如何将理论知识应用到实际开发中，解决问题，优化代码。&lt;/p&gt;
+&lt;p&gt;四、前端开发的持续学习&lt;/p&gt;
+&lt;p&gt;前端技术更新迅速，新的工具和技术不断出现。因此，持续学习是非常重要的。您可以通过阅读文档、参加在线课程、阅读源代码等方式，不断提高自己的技术水平。&lt;/p&gt;
+&lt;p&gt;总的来说，前端学习是一个系统的过程，需要时间和努力。但只要您有决心和毅力，就一定能够成为一名专业的前端开发者。希望这篇文章能帮助您更好地理解前端学习的过程和方法，祝您学习顺利！&lt;/p&gt;
+">前端学习：从零基础到专业开发者</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/ren-gong-zhi-neng-de-jue-qi-yu-ying-yong/"" data-c="
+          &lt;p&gt;在科技飞速发展的今天，我们生活在一个信息爆炸的时代，各种新技术层出不穷，而人工智能无疑是其中最为引人注目的一种。人工智能（Artificial Intelligence，AI）是指由人制造出来的系统所表现出来的智能，这种智能能够理解、学习、适应并执行任务。人工智能的发展已经渗透到我们生活的各个角落，无论是智能手机、自动驾驶汽车，还是智能家居设备，都离不开人工智能的支持。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;首先，我们来看看人工智能在医疗领域的应用。人工智能可以通过分析大量的医疗数据，帮助医生做出更准确的诊断。例如，谷歌的DeepMind公司开发的人工智能程序，可以通过分析眼部扫描图像，识别出可能患有糖尿病性视网膜病变的患者。此外，人工智能还可以通过深度学习和机器学习技术，预测疾病的发展趋势，为医生制定治疗方案提供依据。&lt;/p&gt;
+&lt;p&gt;其次，人工智能在教育领域也有着广泛的应用。人工智能可以根据学生的学习情况，提供个性化的学习方案，帮助学生提高学习效率。例如，Knewton公司的Alta平台，可以根据学生的学习进度，推荐合适的学习资源，提供定制化的学习体验。&lt;/p&gt;
+&lt;p&gt;再者，人工智能在金融领域也发挥着重要作用。人工智能可以通过大数据分析和机器学习，预测股市的走势，帮助投资者做出决策。例如，IBM的Watson平台，可以帮助银行分析客户的数据，提供更精准的金融服务。&lt;/p&gt;
+&lt;p&gt;然而，人工智能的发展也带来了一些挑战。例如，人工智能可能会取代一些传统的工作，导致就业问题；人工智能的决策过程可能缺乏透明度，引发公众的疑虑；人工智能可能会被用于不正当的目的，如网络攻击等。因此，我们需要在推动人工智能发展的同时，也要关注这些问题，寻求解决之道。&lt;/p&gt;
+&lt;p&gt;总的来说，人工智能的发展正在改变我们的生活，它的潜力无限，但也面临着挑战。我们需要以开放的心态，积极的态度，去接受这个新技术，去探索它的可能性，去解决它带来的问题。只有这样，我们才能在人工智能的浪潮中，找到属于我们自己的位置。&lt;/p&gt;
+&lt;p&gt;在未来，人工智能将更加深入地融入到我们的生活中，无论是医疗、教育，还是金融，甚至是我们的日常生活中，都离不开人工智能的影子。我们需要用开放的心态去接受这个新技术，去探索它的可能性，去解决它带来的问题。只有这样，我们才能在人工智能的浪潮中，找到属于我们自己的位置。&lt;/p&gt;
+&lt;p&gt;人工智能的发展是一个长期的过程，我们需要有耐心，有决心，去迎接这个挑战。我们相信，只要我们有足够的信心和勇气，我们一定能够在人工智能的浪潮中，找到属于我们自己的位置。&lt;/p&gt;
+">人工智能的崛起与应用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/shu-zi-zhong-guo-jian-she-quan-jie-xi-qian-yan-re-dian-shi-jian-ying-yong/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;数字中国建设，这些前沿热点值得关注！🇨🇳&lt;/p&gt;
+&lt;p&gt;大家好！今天我要和大家分享一些关于数字中国建设的最新热点话题。随着信息技术的迅猛发展，数字中国已经成为了推动社会经济发展的重要力量。让我们一起来了解一下吧！💡&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1. 数字中国的内涵和发展历程：数字中国是指利用信息技术手段，全面推进国家治理现代化、提高国家竞争力的过程。自2015年提出“互联网+”以来，我国的数字中国建设取得了长足进展。目前，数字中国已经成为了新时代的重要战略布局，对于推动经济社会发展具有重要意义。💪&lt;br&gt;
+2. 数字经济对国家经济发展的贡献：数字经济已经成为了我国经济增长的新动力。通过数字化改造和&lt;img src=&#34;https://copa.us.kg/post-images/1712200077252.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;创新应用，数字经济不仅提升了传统产业的竞争力，还催生了许多新兴产业。根据最新数据显示，预计到2023年，我国数据生产总量将超过3ZB，成为全球数据大国。这为我国经济发展注入了新的活力。💼&lt;br&gt;
+3. 数字化转型中的挑战与机遇：数字化转型是一把双刃剑，既带来了巨大的机遇，也面临着一系列的挑战。在数字化转型过程中，我们需要重点关注数据流动的安全性和隐私保护等问题。同时，政府、企业和个人也需要积极应对挑战，抓住机遇，推动数字化转型的顺利进行。🚀&lt;img src=&#34;https://copa.us.kg/post-images/1712200102875.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+以上就是我对于数字中国建设的一些观点和看法。希望这些信息能够对大家有所帮助！如果你们还有其他问题或者想要了解更多信息，欢迎留言哦！🤗&lt;/p&gt;
+">数字中国🇨🇳建设全解析：前沿热点+实践应用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/zhu-ce-x10mx-mian-fei-yu-ming-bing-kai-shi-nin-de-zai-xian-zhi-lu/"" data-c="
+          &lt;p&gt;在这个数字时代，拥有一个个人或商业网站已经变得非常重要。无论是展示个人作品、建立品牌形象还是在线销售产品，一个可靠的域名都是您在线存在的基础。如果您正在寻找一个免费的域名来开始您的在线之旅，那么x10.mx提供了一个不错的选择。在这篇文章中，我们将指导您如何在x10 hosting上注册一个x10.mx免费域名。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;简介：&lt;br&gt;
+x10.mx是x10 hosting提供的一个免费域名服务，它允许用户无需支付额外费用即可获得一个域名。这个服务适合那些想要测试水域、启动小型项目或简单地拥有一个个人网站的用户。请注意，免费域名通常带有一些限制，例如可能包含广告或对自定义选项有限制。&lt;/p&gt;
+&lt;p&gt;步骤1：访问x10 hosting官网&lt;br&gt;
+首先，您需要打开浏览器并访问x10 hosting的官方网站。在那里，您可以找到关于他们提供的服务和域名注册的详细信息。&lt;/p&gt;
+&lt;p&gt;步骤2：查找免费域名选项&lt;br&gt;
+在x10 hosting的网站上，浏览他们的服务页面，找到免费域名的选项。通常，这会在他们的域名注册部分被明确标记出来。&lt;/p&gt;
+&lt;p&gt;步骤3：搜索可用的x10.mx域名&lt;br&gt;
+使用x10 hosting提供的工具搜索您想要的域名。输入您的首选名称，系统将告诉您该域名是否可用。如果不可使用，您可能需要尝试其他选项或变体。&lt;/p&gt;
+&lt;p&gt;步骤4：选择您的免费域名&lt;br&gt;
+一旦找到一个可用的x10.mx域名，选择它并继续到下一步。请记住，免费域名可能有一些限制，所以确保您了解这些限制。&lt;/p&gt;
+&lt;p&gt;步骤5：创建账户&lt;br&gt;
+如果您还没有x10 hosting账户，您需要创建一个。提供必要的信息，如姓名、电子邮件地址和密码。确保您的电子邮件地址有效，因为所有关于您的域名的信息将通过电子邮件发送。&lt;/p&gt;
+&lt;p&gt;步骤6：验证您的账户&lt;br&gt;
+根据x10 hosting的要求，您可能需要验证您的账户。这通常涉及查看您的电子邮件中的验证链接并点击它。&lt;/p&gt;
+&lt;p&gt;步骤7：完成注册&lt;br&gt;
+完成账户设置后，您将被引导完成域名注册过程。确认您的域名选择，并同意任何相关的服务条款。&lt;/p&gt;
+&lt;p&gt;步骤8：设置您的域名&lt;br&gt;
+注册完成后，您将被引导到您的控制面板，在那里您可以管理您的域名设置，包括指向您的网站或博客的DNS记录。&lt;/p&gt;
+&lt;p&gt;总结：&lt;br&gt;
+注册一个x10.mx免费域名是在x10 hosting上开始您的在线项目的简单方法。虽然它可能有一些限制，但它为您提供了一个平台来建立您的在线存在，而无需前期投资。记得定期检查您的域名和服务的条款和条件，以确保您完全了解您的免费域名的功能和限制。&lt;/p&gt;
+">注册x10.mx免费域名并开始您的在线之旅</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/zai-blogger-jian-li-yi-ge-bo-ke/"" data-c="
+          &lt;p&gt;在Blogger上建立一个博客的步骤如下：&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开浏览器，访问Blogger官网（https://www.blogger.com/）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击右上角的“登录”按钮，使用您的Google账户登录。如果您还没有Google账户，请先创建一个。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录成功后，点击页面右上角的“新建博客”按钮。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在弹出的窗口中，输入您的博客名称、博客标题和博客描述。这些信息将用于创建您的博客。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择您想要使用的模板。Blogger提供了许多免费模板供您选择，您可以根据自己的喜好进行选择。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击“继续”按钮，进入下一步。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在这一步，您可以选择是否允许评论、订阅等选项。根据自己的需求进行设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击“创建博客”按钮，系统将自动为您创建一个新的博客。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建成功后，您可以开始撰写博客文章。点击“写文章”按钮，进入编辑页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在编辑页面，您可以输入文章标题、内容、添加图片等。Blogger提供了丰富的格式设置选项，如字体、颜色、对齐方式等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;完成文章编辑后，点击“发布”按钮，您的文章将被发布到您的博客上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;您还可以通过Blogger提供的其他功能，如设置导航菜单、添加小工具等，来丰富您的博客。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后，别忘了分享您的博客链接，让更多的人看到您的精彩内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+">在 Blogger 建立一个博客</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/使用必应自签证书在S-UI面板上搭建Tuic V5节点/"" data-c="
+          &lt;p&gt;简介：&lt;br&gt;
+本文将指导您如何使用必应自签证书在S-UI面板上搭建Tuic V5节点。Tuic是一个轻量级的UI组件库，适用于各种Web应用程序。S-UI是一个基于Vue.js的前端框架，提供了丰富的UI组件和易于使用的API。通过使用必应自签证书，您可以确保在搭建过程中的安全性和可靠性。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;步骤1：安装S-UI面板&lt;br&gt;
+首先，您需要在您的计算机上安装S-UI面板。可以通过以下命令使用npm进行安装：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install s-ui
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;步骤2：生成必应自签证书&lt;br&gt;
+在搭建Tuic V5节点之前，您需要生成一个必应自签证书。可以使用以下命令生成证书：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这将生成一个有效期为365天的自签证书。&lt;/p&gt;
+&lt;p&gt;步骤3：配置S-UI面板&lt;br&gt;
+打开S-UI面板的配置文件（通常是&lt;code&gt;s-ui.config.js&lt;/code&gt;），找到&lt;code&gt;https&lt;/code&gt;选项，并将其设置为&lt;code&gt;true&lt;/code&gt;，以启用HTTPS连接。然后，将生成的自签证书文件路径添加到&lt;code&gt;https&lt;/code&gt;选项中：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module.exports = {
+  // ...
+  https: {
+    key: &#39;./key.pem&#39;,
+    cert: &#39;./cert.pem&#39;
+  },
+  // ...
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;步骤4：安装Tuic V5&lt;br&gt;
+在完成上述配置后，您可以安装Tuic V5。使用以下命令进行安装：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install tuic@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;步骤5：引入Tuic V5组件&lt;br&gt;
+在您的Vue项目中，您需要引入Tuic V5组件。打开您的Vue项目的入口文件（通常是&lt;code&gt;main.js&lt;/code&gt;），并添加以下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import &#39;tuic/dist/css/tuic.css&#39;;
+import Tuic from &#39;tuic&#39;;
+Vue.use(Tuic);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;步骤6：使用Tuic V5组件&lt;br&gt;
+现在您可以在您的Vue项目中使用Tuic V5组件了。根据您的需求，可以在模板中使用Tuic提供的组件，例如按钮、输入框等。&lt;/p&gt;
+&lt;p&gt;总结：&lt;br&gt;
+通过按照上述步骤，您可以成功使用必应自签证书在S-UI面板上搭建Tuic V5节点。这将为您提供一个安全且可靠的开发环境，使您能够利用Tuic V5提供的丰富UI组件来构建您的Web应用程序。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;!-- more --&gt;
+&lt;!-- more --&gt;
+&lt;!-- more --&gt;
+">使用必应自签证书在S-UI面板上搭建Tuic V5节点</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://copa.us.kg/post/about/"" data-c="
+          &lt;p&gt;网站站名：codepark&lt;br&gt;
+博客网址：https://copa.pages.dev https://copa.dev.tc https://copa.app.tc&lt;br&gt;
+博客简介：CodePark，记录菜鸟成长与实用教程。&lt;br&gt;
+上线时间：2024年03月30日&lt;br&gt;
+站长名字：Hazel&lt;br&gt;
+联系邮箱：x813942117(at)foxmail.com&lt;br&gt;
+如何找到本站&lt;br&gt;
+记不住本站域名的朋友，您可以收藏本站方便以后访问！&lt;br&gt;
+您也可以使用必应等搜索引擎，搜索“codepark”，即可找到本站！&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;隐私声明&lt;br&gt;
+欢迎来到codepark网站。我们尊重并保护所有使用我们网站的用户的隐私权。为了给您提供更精准、个性化的服务，我们会按照本隐私权政策的规定使用和披露您的个人信息。但我们将始终以高度的勤勉、审慎义务对待这些信息。除本隐私政策另有规定外，在未征得您事先许可的情况下，我们不会将这些信息对外披露或向第三方提供。我们会不时更新本隐私权政策。 您在同意本隐私权政策之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本站服务条款不可分割的一部分。&lt;br&gt;
+一、适用范围&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在您使用本站网络服务，或访问本站页面时，本站自动接收并记录的您的浏览器和计算机信息，包括但不限于您的IP地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；&lt;br&gt;
+二、信息使用&lt;br&gt;
+本站不会向任何无关第三方提供、出售、出租、分享或交易您的个人信息，除非事先得到您的许可。&lt;br&gt;
+三、信息披露&lt;br&gt;
+在如下情况下，本站将依据您的个人意愿或法律的规定全部或部分的披露您的个人信息：&lt;/li&gt;
+&lt;li&gt;经您事先同意，向第三方披露；&lt;/li&gt;
+&lt;li&gt;根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；&lt;/li&gt;
+&lt;li&gt;如您出现违反中国有关法律、法规或者本站服务协议或相关规则的情况，需要向第三方披露；&lt;/li&gt;
+&lt;li&gt;其它本站根据法律、法规或者网站政策认为合适的披露。&lt;br&gt;
+四、Cookie的使用&lt;/li&gt;
+&lt;li&gt;在您未拒绝接受cookies的情况下，本站会在您的计算机上设定或取用cookies ，以便您能登录或使用依赖于cookies的本站平台服务或功能。本站使用cookies可为您提供更加周到的个性化服务，包括推广服务。&lt;/li&gt;
+&lt;li&gt;您有权选择接受或拒绝接受cookies。您可以通过修改浏览器设置的方式拒绝接受cookies。但如果您选择拒绝接受cookies，则您可能无法登录或使用依赖于cookies的本站网络服务或功能。&lt;/li&gt;
+&lt;li&gt;通过本站所设cookies所取得的有关信息，将适用本政策。&lt;br&gt;
+五、本隐私政策的更改&lt;br&gt;
+本网站保留随时修改本隐私政策的权利。所以请使用者务必经常查看本隐私政策。如果您继续使用本网站，我们就认为您接受我们对本隐私政策的任何改动。&lt;br&gt;
+六、法律适用与管辖&lt;br&gt;
+本隐私声明不适用于您通过本网站链接到的第三方网站，无论是明确或默示的链接。您应自行判断第三方网站的隐私政策是否可接受，并自行承担因使用第三方网站而导致的任何风险。&lt;br&gt;
+本隐私声明受中华人民共和国法律管辖。如有任何争议，请与本站联系。&lt;br&gt;
+资源声明&lt;br&gt;
+本站发布的部分文章、资源来源于网络，版权归原作者所有，切勿用于商业用途。&lt;br&gt;
+本站为个人站点，仅是个交流分享平台，提供观摩学习和交流之用，将不对任何资源负法律责任。&lt;br&gt;
+在本站下载软件、资源时：&lt;br&gt;
+本站不对该软件的任何问题提供服务或技术性的支持。&lt;br&gt;
+本站不保证该软件与其他软件产品之间的任何兼容性问题。&lt;br&gt;
+本站不保证软件在安装及使用过程中能完美运行不出错。&lt;br&gt;
+任何因软件的使用而引起的损失，本站概不承担任何赔偿责任。&lt;br&gt;
+下载及安装软件前，请自行对该文件先进行查毒，确保无病毒后再安装使用。&lt;br&gt;
+下载本站软件仅用于学习交流，请勿用于商业用途，测试使用完后请及时删除。&lt;br&gt;
+涉及版权问题的软件请自觉于24小时内删除，建议购买正版授权。&lt;br&gt;
+如果涉及或者侵害到您的版权，请立即通知我，我会立即撤下相关的文章、资源。&lt;br&gt;
+原创文章转载时，请务必以超链接形式注明文章原始出处。&lt;br&gt;
+自我介绍&lt;br&gt;
+你好！我是Hazel，专注于探索前端的世界，欢迎你与我同行，在CodePark上，一起感受技术的韵律，探寻知识的海洋。长风破浪会有时，直挂云帆济沧海。让我们携手，并肩前行，在平凡中发现不凡的力量。&lt;br&gt;
+QQ：二1零25零4一五6（验证内容“codepark”）&lt;br&gt;
+邮箱：x813942117#foxmail.com（#改成@），国外邮箱：xuhaozhao123#outlook.com（同样把#改成@）&lt;br&gt;
+赞助&lt;br&gt;
+这是一个平凡人做的一个平凡的网站，当然，如果你认为这个网站对你有用并希望它更好的服务大家，那么，请你赞助Hazel吧，您的赞助将全部用于网站运营。&lt;/li&gt;
+&lt;/ol&gt;
+">关于本站</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+  <script
+    src="https://gcore.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200
+    });
+  </script>
+
+
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/media/js/mouse/fireworks.js"></script>
+
+
+  <script src="/media/js/cool.js"></script>
+
+
+
+  <div class="snow-container"></div>
+  <script color="0,205,205" pointer-events="auto" zIndex="-1" opacity='0.7' count="99" src="/media/js/bg/canvas-nest.js"></script>
+
+</html>

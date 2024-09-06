@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://copa.us.kg</id>
+    <title>codepark</title>
+    <updated>2024-09-06T15:47:59.157Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://copa.us.kg"/>
+    <link rel="self" href="https://copa.us.kg/atom.xml"/>
+    <subtitle>CodePark，记录菜鸟成长与实用教程。</subtitle>
+    <logo>https://copa.us.kg/images/avatar.png</logo>
+    <icon>https://copa.us.kg/favicon.ico</icon>
+    <rights>All rights reserved 2024, codepark</rights>
+    <entry>
+        <title type="html"><![CDATA[这次——我们真的要离开了]]></title>
+        <id>https://copa.us.kg/post/leave/</id>
+        <link href="https://copa.us.kg/post/leave/">
+        </link>
+        <updated>2024-09-06T12:48:59.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[小白云—云服务推荐]]></title>
+        <id>https://copa.us.kg/post/OuyurPkOg/</id>
+        <link href="https://copa.us.kg/post/OuyurPkOg/">
+        </link>
+        <updated>2024-08-18T06:26:27.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[梦想的力量]]></title>
+        <id>https://copa.us.kg/post/dream/</id>
+        <link href="https://copa.us.kg/post/dream/">
+        </link>
+        <updated>2024-08-03T09:43:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>梦想如同一粒种子，尽管微不足道，却蕴含着惊人的力量。在人生的旅途中，我们常常被挫折和困难所困扰，感到迷茫和无助。然而，只要我们坚定心中的梦想，不断追求并坚持不懈，那么梦想的力量将会引领我们前行，让我们看到希望的曙光。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>梦想如同一粒种子，尽管微不足道，却蕴含着惊人的力量。在人生的旅途中，我们常常被挫折和困难所困扰，感到迷茫和无助。然而，只要我们坚定心中的梦想，不断追求并坚持不懈，那么梦想的力量将会引领我们前行，让我们看到希望的曙光。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[web开发之创造无障碍网页]]></title>
+        <id>https://copa.us.kg/post/webkaifawza/</id>
+        <link href="https://copa.us.kg/post/webkaifawza/">
+        </link>
+        <updated>2024-07-29T05:42:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>创造无障碍网页是为了确保所有用户，包括有视觉、听觉、运动等障碍的用户，都能顺利访问和使用网站。以下是一些建议和实践方法：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>创造无障碍网页是为了确保所有用户，包括有视觉、听觉、运动等障碍的用户，都能顺利访问和使用网站。以下是一些建议和实践方法：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[web开发之github的使用]]></title>
+        <id>https://copa.us.kg/post/webkaifa/</id>
+        <link href="https://copa.us.kg/post/webkaifa/">
+        </link>
+        <updated>2024-07-29T05:36:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Secure your Tailscale infra further with Mutual TLS (mTLS)]]></title>
+        <id>https://copa.us.kg/post/mtls/</id>
+        <link href="https://copa.us.kg/post/mtls/">
+        </link>
+        <updated>2024-07-14T05:00:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文链接：https://vpetersson.com/2024/05/29/tailscale-and-mutual-tls.html<br>
+A while back, I wrote about how I’m using Tailscale to secure my local service, thanks to Tailscale’s built-in certificates. This greatly improved the security of my local environment. Combined with the rather sophisticated ACL policies, you can lock things down pretty well.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文链接：https://vpetersson.com/2024/05/29/tailscale-and-mutual-tls.html<br>
+A while back, I wrote about how I’m using Tailscale to secure my local service, thanks to Tailscale’s built-in certificates. This greatly improved the security of my local environment. Combined with the rather sophisticated ACL policies, you can lock things down pretty well.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从零开始构建网站：初学者指南Building Your First Website: A Beginner's Guide]]></title>
+        <id>https://copa.us.kg/post/webdevbegin/</id>
+        <link href="https://copa.us.kg/post/webdevbegin/">
+        </link>
+        <updated>2024-06-30T09:22:35.000Z</updated>
+        <summary type="html"><![CDATA[<p>你是否曾想过自己构建一个网站？也许是一个展示个人作品的博客，一个分享兴趣爱好的平台，或者一个为小型企业提供服务的网页。无论你的目标是什么，网页开发都能为你提供实现的工具和途径。<br>
+本文将为你提供一个清晰易懂的路线图，帮助你从零开始学习网页开发，并最终构建出属于你自己的网站。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>你是否曾想过自己构建一个网站？也许是一个展示个人作品的博客，一个分享兴趣爱好的平台，或者一个为小型企业提供服务的网页。无论你的目标是什么，网页开发都能为你提供实现的工具和途径。<br>
+本文将为你提供一个清晰易懂的路线图，帮助你从零开始学习网页开发，并最终构建出属于你自己的网站。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[踏入网页开发世界：编程语言与工具指南Embarking on the Web Development Journey: A Guide to Programming Languages and Tools]]></title>
+        <id>https://copa.us.kg/post/webdev/</id>
+        <link href="https://copa.us.kg/post/webdev/">
+        </link>
+        <updated>2024-06-29T09:03:35.000Z</updated>
+        <summary type="html"><![CDATA[<p>网页开发，一个充满创造力和挑战的领域，吸引着越来越多的人加入其中。想要构建出美观、功能强大的网站，需要掌握一系列的编程语言和工具。本文将为初学者提供一份简洁易懂的指南，介绍网页开发中常用的编程语言和工具，帮助你开启这段精彩的旅程。本文为中英双语版，英语版位于文章下方。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>网页开发，一个充满创造力和挑战的领域，吸引着越来越多的人加入其中。想要构建出美观、功能强大的网站，需要掌握一系列的编程语言和工具。本文将为初学者提供一份简洁易懂的指南，介绍网页开发中常用的编程语言和工具，帮助你开启这段精彩的旅程。本文为中英双语版，英语版位于文章下方。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[腾讯挑战垄断霸权，打响渠道分成第一枪！]]></title>
+        <id>https://copa.us.kg/post/fld/</id>
+        <link href="https://copa.us.kg/post/fld/">
+        </link>
+        <updated>2024-06-26T05:58:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>在互联网的世界中，一场关于利益与公理的较量正在悄然上演。近日，DNFM官方宣布，自6月20日起，不再上架部分安卓平台的应用商店，如HW、OPPO、vivo等渠道将停止更新。这一举措看似平常，实则背后隐藏着巨大的利益博弈——硬核联盟。<br>
+全球范围内，安卓渠道抽成普遍高达50%，而中国市场的抽成比例更是令人咋舌。在这个畸形的体系中，腾讯打响了反击的第一枪。背靠800万勇士，腾讯向垄断霸权开响了第一枪！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在互联网的世界中，一场关于利益与公理的较量正在悄然上演。近日，DNFM官方宣布，自6月20日起，不再上架部分安卓平台的应用商店，如HW、OPPO、vivo等渠道将停止更新。这一举措看似平常，实则背后隐藏着巨大的利益博弈——硬核联盟。<br>
+全球范围内，安卓渠道抽成普遍高达50%，而中国市场的抽成比例更是令人咋舌。在这个畸形的体系中，腾讯打响了反击的第一枪。背靠800万勇士，腾讯向垄断霸权开响了第一枪！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中国AI技术在教育中的应用]]></title>
+        <id>https://copa.us.kg/post/aiedu/</id>
+        <link href="https://copa.us.kg/post/aiedu/">
+        </link>
+        <updated>2024-06-25T05:48:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>中国AI技术在教育中的应用已经取得显著进展，<strong>主要体现在智能测评系统、智能教学系统、虚拟现实教育以及教育机器人方面</strong>。具体如下：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>中国AI技术在教育中的应用已经取得显著进展，<strong>主要体现在智能测评系统、智能教学系统、虚拟现实教育以及教育机器人方面</strong>。具体如下：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【感恩前行，共筑梦想】——CodePark站长Hazel致广大赞助者的一封信]]></title>
+        <id>https://copa.us.kg/post/zanzhu/</id>
+        <link href="https://copa.us.kg/post/zanzhu/">
+        </link>
+        <updated>2024-06-25T03:28:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>亲爱的CodePark访问者们：<br>
+你们好！<br>
+我是CodePark的站长Hazel。今天，我带着一份感激之情，写下这封信，与大家分享我们的现状与未来，以及一个特别的请求。<br>
+自CodePark成立以来，我一直致力于为广大用户输出高质量内容。然而，随着加载资源与加载速度要求的不断提高，我们的服务器承载着巨大的运营压力。同时，现有的二级域名无法满足百度等引擎的收录条件，因此，为了保持网站的流畅访问和快速响应以更好的向大家服务，我们迫切需要升级我们的运营条件。<br>
+在此，我想对一直以来支持CodePark的每一位用户表示最诚挚的感谢。是你们的热爱和支持，让这个平台充满了活力和创造力。然而，技术的更新换代需要不小的资金投入，而我们始终坚持将资金用于提升用户体验和服务质量上，因此，我们决定寻求外部赞助。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>亲爱的CodePark访问者们：<br>
+你们好！<br>
+我是CodePark的站长Hazel。今天，我带着一份感激之情，写下这封信，与大家分享我们的现状与未来，以及一个特别的请求。<br>
+自CodePark成立以来，我一直致力于为广大用户输出高质量内容。然而，随着加载资源与加载速度要求的不断提高，我们的服务器承载着巨大的运营压力。同时，现有的二级域名无法满足百度等引擎的收录条件，因此，为了保持网站的流畅访问和快速响应以更好的向大家服务，我们迫切需要升级我们的运营条件。<br>
+在此，我想对一直以来支持CodePark的每一位用户表示最诚挚的感谢。是你们的热爱和支持，让这个平台充满了活力和创造力。然而，技术的更新换代需要不小的资金投入，而我们始终坚持将资金用于提升用户体验和服务质量上，因此，我们决定寻求外部赞助。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中国AI技术的崛起]]></title>
+        <id>https://copa.us.kg/post/cnai/</id>
+        <link href="https://copa.us.kg/post/cnai/">
+        </link>
+        <updated>2024-06-23T05:11:38.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="中国ai技术的崛起">中国AI技术的崛起</h1>
+<h2 id="目录">目录</h2>
+<ol>
+<li>
+<p><strong>AI技术的新发展</strong></p>
+<ul>
+<li>中国AI企业崛起的背景</li>
+<li>技术创新与市场策略</li>
+</ul>
+</li>
+<li>
+<p><strong>AI技术突破与应用案例</strong></p>
+<ul>
+<li>深度学习、机器视觉和自然语言处理的进展</li>
+<li>面部识别系统与智能语音识别技术的成功应用</li>
+</ul>
+</li>
+<li>
+<p><strong>成功进入美国市场的策略和挑战</strong></p>
+<ul>
+<li>应对文化差异和市场准入壁垒</li>
+<li>与当地教育机构和科研机构的合作</li>
+</ul>
+</li>
+<li>
+<p><strong>未来发展趋势</strong></p>
+<ul>
+<li>AI技术在智能制造和智慧城市领域的潜力</li>
+<li>国际竞争与中美AI领域的合作与竞争</li>
+</ul>
+</li>
+<li>
+<p><strong>结论</strong></p>
+<ul>
+<li>AI技术“出海”的意义</li>
+<li>中国企业在全球科技舞台上的未来展望</li>
+</ul>
+</li>
+</ol>
+<p>在当今科技迅猛发展的时代，人工智能（AI）已成为全球创新的核心力量。近年来，中国的AI企业不仅在国内市场上取得了显著成就，而且凭借其技术创新和精准的市场策略，成功拓展了竞争激烈的美国市场。这一成就背后，是企业不懈的追求和努力，以及深层次的战略布局和文化适应。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="中国ai技术的崛起">中国AI技术的崛起</h1>
+<h2 id="目录">目录</h2>
+<ol>
+<li>
+<p><strong>AI技术的新发展</strong></p>
+<ul>
+<li>中国AI企业崛起的背景</li>
+<li>技术创新与市场策略</li>
+</ul>
+</li>
+<li>
+<p><strong>AI技术突破与应用案例</strong></p>
+<ul>
+<li>深度学习、机器视觉和自然语言处理的进展</li>
+<li>面部识别系统与智能语音识别技术的成功应用</li>
+</ul>
+</li>
+<li>
+<p><strong>成功进入美国市场的策略和挑战</strong></p>
+<ul>
+<li>应对文化差异和市场准入壁垒</li>
+<li>与当地教育机构和科研机构的合作</li>
+</ul>
+</li>
+<li>
+<p><strong>未来发展趋势</strong></p>
+<ul>
+<li>AI技术在智能制造和智慧城市领域的潜力</li>
+<li>国际竞争与中美AI领域的合作与竞争</li>
+</ul>
+</li>
+<li>
+<p><strong>结论</strong></p>
+<ul>
+<li>AI技术“出海”的意义</li>
+<li>中国企业在全球科技舞台上的未来展望</li>
+</ul>
+</li>
+</ol>
+<p>在当今科技迅猛发展的时代，人工智能（AI）已成为全球创新的核心力量。近年来，中国的AI企业不仅在国内市场上取得了显著成就，而且凭借其技术创新和精准的市场策略，成功拓展了竞争激烈的美国市场。这一成就背后，是企业不懈的追求和努力，以及深层次的战略布局和文化适应。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[推广：华纳云，开启您的云端高效工作与生活之旅]]></title>
+        <id>https://copa.us.kg/post/hncloud/</id>
+        <link href="https://copa.us.kg/post/hncloud/">
+        </link>
+        <updated>2024-06-22T02:28:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>在数字化时代，云计算服务日渐成为企业与个人提高效率、实现价值创造的关键工具。华纳云作为行业内的领先者，致力于为用户提供安全、高效、可靠的云端服务体验。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在数字化时代，云计算服务日渐成为企业与个人提高效率、实现价值创造的关键工具。华纳云作为行业内的领先者，致力于为用户提供安全、高效、可靠的云端服务体验。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[端午节：传统与现代的邻里桥梁]]></title>
+        <id>https://copa.us.kg/post/duanwu/</id>
+        <link href="https://copa.us.kg/post/duanwu/">
+        </link>
+        <updated>2024-06-10T04:27:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>端午节，又称端阳节、龙舟节，源远流长，其起源可追溯至中国古代，为纪念爱国诗人屈原而设立。屈原忠于国家，却遭排挤陷害，在五月初五投汨罗江自尽。民间为了纪念他的高尚品德和爱国精神，便有了划龙舟、吃粽子、挂艾草等一系列习俗。这些活动不仅寄托了人们对屈原的哀思，也寓意着驱邪避疫、祈求健康平安。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>端午节，又称端阳节、龙舟节，源远流长，其起源可追溯至中国古代，为纪念爱国诗人屈原而设立。屈原忠于国家，却遭排挤陷害，在五月初五投汨罗江自尽。民间为了纪念他的高尚品德和爱国精神，便有了划龙舟、吃粽子、挂艾草等一系列习俗。这些活动不仅寄托了人们对屈原的哀思，也寓意着驱邪避疫、祈求健康平安。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[jsDelivr在中国的困境：滥用的后果与解决方案]]></title>
+        <id>https://copa.us.kg/post/jsdelivr/</id>
+        <link href="https://copa.us.kg/post/jsdelivr/">
+        </link>
+        <updated>2024-06-10T04:19:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[张锡峰励志演讲]]></title>
+        <id>https://copa.us.kg/post/lizhi/</id>
+        <link href="https://copa.us.kg/post/lizhi/">
+        </link>
+        <updated>2024-05-19T09:32:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>1.衡水中学演讲张锡峰演讲稿</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>1.衡水中学演讲张锡峰演讲稿</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通知：Codepark站长Hazel关于网站暂时停更的说明]]></title>
+        <id>https://copa.us.kg/post/notice/</id>
+        <link href="https://copa.us.kg/post/notice/">
+        </link>
+        <updated>2024-05-04T08:19:03.000Z</updated>
+        <summary type="html"><![CDATA[<p>尊敬的访客们，<br>
+我是Codepark（https://xuhaozhao123.github.io）的站长Hazel。今天，我必须带来一则可能会让许多忠实读者感到遗憾的消息。经过深思熟虑，我决定暂时（直到2028年）停止更新我们的网站。这个决定并非轻率，而是基于当前的实际情况和未来的规划。在此，我想向大家详细说明停更的原因、影响以及我们未来的展望。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>尊敬的访客们，<br>
+我是Codepark（https://xuhaozhao123.github.io）的站长Hazel。今天，我必须带来一则可能会让许多忠实读者感到遗憾的消息。经过深思熟虑，我决定暂时（直到2028年）停止更新我们的网站。这个决定并非轻率，而是基于当前的实际情况和未来的规划。在此，我想向大家详细说明停更的原因、影响以及我们未来的展望。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[超详细！使用github免费搭建个人博客]]></title>
+        <id>https://copa.us.kg/post/githubpages/</id>
+        <link href="https://copa.us.kg/post/githubpages/">
+        </link>
+        <updated>2024-05-02T13:37:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>作为一名技术爱好者，相信各位大神都有把自己学习技术的心得或者一些踩坑、易错的过程记录下来的需求，首选的是技术平台，但高昂的服务器与域名费用往往使得我们(ziji)难以承担。今天就来教大家免费搭建一个自己的个人博客平台。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>作为一名技术爱好者，相信各位大神都有把自己学习技术的心得或者一些踩坑、易错的过程记录下来的需求，首选的是技术平台，但高昂的服务器与域名费用往往使得我们(ziji)难以承担。今天就来教大家免费搭建一个自己的个人博客平台。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Evolution Host 免费VPS 申请]]></title>
+        <id>https://copa.us.kg/post/evolution-host-freevps/</id>
+        <link href="https://copa.us.kg/post/evolution-host-freevps/">
+        </link>
+        <updated>2024-04-27T04:02:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Evolution Host vps是可以免费申请的，无需信用卡，也不需要注册，只需要简单发送一封包含自己网站地址的邮件，Evolution Host需要评估之后会给你开通一台永久免费的vps。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Evolution Host vps是可以免费申请的，无需信用卡，也不需要注册，只需要简单发送一封包含自己网站地址的邮件，Evolution Host需要评估之后会给你开通一台永久免费的vps。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Web性能优化的全栈视角：速度与用户体验的共同追求]]></title>
+        <id>https://copa.us.kg/post/web-xing-neng-you-hua-de-quan-zhan-shi-jiao-su-du-yu-yong-hu-ti-yan-de-gong-tong-zhui-qiu/</id>
+        <link href="https://copa.us.kg/post/web-xing-neng-you-hua-de-quan-zhan-shi-jiao-su-du-yu-yong-hu-ti-yan-de-gong-tong-zhui-qiu/">
+        </link>
+        <updated>2024-04-13T11:00:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>在数字时代，用户对网页加载速度和交互响应性的期待不断提高。对于全栈开发者而言，提升Web性能不仅是技术挑战，更是提供卓越用户体验的关键。本文将从全栈的角度探讨如何优化Web性能，包括前端、后端以及数据库等层面的策略。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在数字时代，用户对网页加载速度和交互响应性的期待不断提高。对于全栈开发者而言，提升Web性能不仅是技术挑战，更是提供卓越用户体验的关键。本文将从全栈的角度探讨如何优化Web性能，包括前端、后端以及数据库等层面的策略。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[跨平台移动应用开发：全栈程序员的Flutter与React Native探索]]></title>
+        <id>https://copa.us.kg/post/kua-ping-tai-yi-dong-ying-yong-kai-fa-quan-zhan-cheng-xu-yuan-de-flutter-yu-react-native-tan-suo/</id>
+        <link href="https://copa.us.kg/post/kua-ping-tai-yi-dong-ying-yong-kai-fa-quan-zhan-cheng-xu-yuan-de-flutter-yu-react-native-tan-suo/">
+        </link>
+        <updated>2024-04-13T10:58:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>在当今技术快速演进的时代，移动应用已成为企业与用户互动的重要渠道。对于全栈开发者来说，能够高效地为iOS和Android两大主流平台构建应用是至关重要的。本文将探讨两种流行的跨平台移动应用开发框架——Flutter和React Native——并分析它们如何帮助全栈开发者实现这一目标。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在当今技术快速演进的时代，移动应用已成为企业与用户互动的重要渠道。对于全栈开发者来说，能够高效地为iOS和Android两大主流平台构建应用是至关重要的。本文将探讨两种流行的跨平台移动应用开发框架——Flutter和React Native——并分析它们如何帮助全栈开发者实现这一目标。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云计算与全栈技能：AWS、Azure与GCP服务模型比较]]></title>
+        <id>https://copa.us.kg/post/yun-ji-suan-yu-quan-zhan-ji-neng-awsazure-yu-gcp-fu-wu-mo-xing-bi-jiao/</id>
+        <link href="https://copa.us.kg/post/yun-ji-suan-yu-quan-zhan-ji-neng-awsazure-yu-gcp-fu-wu-mo-xing-bi-jiao/">
+        </link>
+        <updated>2024-04-13T10:52:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>在当今的技术环境中，云计算已成为企业IT架构不可或缺的一部分。Amazon Web Services (AWS)、Microsoft Azure和Google Cloud Platform (GCP)是市场上最流行的三大云服务提供商。每个平台都有其独特的服务模型和功能，为全栈开发者提供了广泛的工具和资源。本文将比较这三家巨头的服务模型，并特别强调GCP的优势。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在当今的技术环境中，云计算已成为企业IT架构不可或缺的一部分。Amazon Web Services (AWS)、Microsoft Azure和Google Cloud Platform (GCP)是市场上最流行的三大云服务提供商。每个平台都有其独特的服务模型和功能，为全栈开发者提供了广泛的工具和资源。本文将比较这三家巨头的服务模型，并特别强调GCP的优势。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[容器化与全栈开发：Docker与Kubernetes在多平台部署中的角色]]></title>
+        <id>https://copa.us.kg/post/rong-qi-hua-yu-quan-zhan-kai-fa-docker-yu-kubernetes-zai-duo-ping-tai-bu-shu-zhong-de-jiao-se/</id>
+        <link href="https://copa.us.kg/post/rong-qi-hua-yu-quan-zhan-kai-fa-docker-yu-kubernetes-zai-duo-ping-tai-bu-shu-zhong-de-jiao-se/">
+        </link>
+        <updated>2024-04-13T10:50:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>容器化与全栈开发：Docker与Kubernetes在多平台部署中的角色</p>
+<p>在当今快速发展的技术环境中，全栈开发者需要应对各种不同平台和技术栈的挑战。容器化技术的出现，特别是Docker和Kubernetes，为开发者提供了一种高效、可靠的解决方案，以实现跨平台的一致性部署和运维。本文将深入探讨这些工具在全栈开发中的应用，并提供实践指导。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>容器化与全栈开发：Docker与Kubernetes在多平台部署中的角色</p>
+<p>在当今快速发展的技术环境中，全栈开发者需要应对各种不同平台和技术栈的挑战。容器化技术的出现，特别是Docker和Kubernetes，为开发者提供了一种高效、可靠的解决方案，以实现跨平台的一致性部署和运维。本文将深入探讨这些工具在全栈开发中的应用，并提供实践指导。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[现代前端技术栈概览：React、Vue与Angular比较研究]]></title>
+        <id>https://copa.us.kg/post/xian-dai-qian-duan-ji-zhu-zhan-gai-lan-reactvue-yu-angular-bi-jiao-yan-jiu/</id>
+        <link href="https://copa.us.kg/post/xian-dai-qian-duan-ji-zhu-zhan-gai-lan-reactvue-yu-angular-bi-jiao-yan-jiu/">
+        </link>
+        <updated>2024-04-13T10:44:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>在当今多变的Web开发世界中，前端技术正快速发展，新的框架和库不断涌现。然而，React、Vue和Angular由于其独特性和强大的社区支持，已经成为了最受欢迎的三大前端框架。本文将深入探讨这三个技术栈的特性，并对其进行比较研究。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在当今多变的Web开发世界中，前端技术正快速发展，新的框架和库不断涌现。然而，React、Vue和Angular由于其独特性和强大的社区支持，已经成为了最受欢迎的三大前端框架。本文将深入探讨这三个技术栈的特性，并对其进行比较研究。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前后端分离 vs. 全栈一体：架构演变的探讨与实践]]></title>
+        <id>https://copa.us.kg/post/qian-hou-duan-fen-chi-vs-quan-zhan-yi-ti-jia-gou-yan-bian-de-tan-tao-yu-shi-jian/</id>
+        <link href="https://copa.us.kg/post/qian-hou-duan-fen-chi-vs-quan-zhan-yi-ti-jia-gou-yan-bian-de-tan-tao-yu-shi-jian/">
+        </link>
+        <updated>2024-04-13T10:41:15.000Z</updated>
+        <summary type="html"><![CDATA[<p>在软件开发的历史长河中，技术架构经历了多次变革，每一次变革都旨在解决特定时代的问题。本文将探讨前后端分离和全栈一体两种架构的特点、优缺点，以及在不同场景下的最佳实践。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在软件开发的历史长河中，技术架构经历了多次变革，每一次变革都旨在解决特定时代的问题。本文将探讨前后端分离和全栈一体两种架构的特点、优缺点，以及在不同场景下的最佳实践。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[全栈开发基础：从前端到后端的核心技术梳理]]></title>
+        <id>https://copa.us.kg/post/quan-zhan-kai-fa-ji-chu-cong-qian-duan-dao-hou-duan-de-he-xin-ji-zhu-shu-li/</id>
+        <link href="https://copa.us.kg/post/quan-zhan-kai-fa-ji-chu-cong-qian-duan-dao-hou-duan-de-he-xin-ji-zhu-shu-li/">
+        </link>
+        <updated>2024-04-13T10:39:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>全栈开发基础：从前端到后端的核心技术梳理</p>
+<p>在现代软件开发领域，全栈开发者越来越受到重视。他们能够处理从用户界面到服务器端逻辑、数据库管理以及系统部署等一系列工作。为了成为一名合格的全栈工程师，理解各个层面上的技术是必不可少的。本文将深入探讨全栈开发中的核心前端和后端技术。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>全栈开发基础：从前端到后端的核心技术梳理</p>
+<p>在现代软件开发领域，全栈开发者越来越受到重视。他们能够处理从用户界面到服务器端逻辑、数据库管理以及系统部署等一系列工作。为了成为一名合格的全栈工程师，理解各个层面上的技术是必不可少的。本文将深入探讨全栈开发中的核心前端和后端技术。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 Debian 系统安装 Node.js 18]]></title>
+        <id>https://copa.us.kg/post/zai-debian-xi-tong-an-zhuang-nodejs-18/</id>
+        <link href="https://copa.us.kg/post/zai-debian-xi-tong-an-zhuang-nodejs-18/">
+        </link>
+        <updated>2024-04-13T10:03:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>在 Debian 系统上，我们可以使用其内置的包管理器对其安装 Node.js，但是官方包管理器的 Node.js 版本实在是太低了。我们就得需要使用到 Node.js 官方的安装脚本，来对其安装。这篇教程就来记录下 Debian 系统安装 Node.js 的操作步骤</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在 Debian 系统上，我们可以使用其内置的包管理器对其安装 Node.js，但是官方包管理器的 Node.js 版本实在是太低了。我们就得需要使用到 Node.js 官方的安装脚本，来对其安装。这篇教程就来记录下 Debian 系统安装 Node.js 的操作步骤</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用 cmd 命令行，在原版 Windows 安装程序环境中安装系统]]></title>
+        <id>https://copa.us.kg/post/shi-yong-cmd-ming-ling-xing-zai-yuan-ban-windows-an-zhuang-cheng-xu-huan-jing-zhong-an-zhuang-xi-tong/</id>
+        <link href="https://copa.us.kg/post/shi-yong-cmd-ming-ling-xing-zai-yuan-ban-windows-an-zhuang-cheng-xu-huan-jing-zhong-an-zhuang-xi-tong/">
+        </link>
+        <updated>2024-04-13T09:58:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文将引导你使用 cmd 命令行，在原版 Windows 安装程序环境中安装系统</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文将引导你使用 cmd 命令行，在原版 Windows 安装程序环境中安装系统</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[构建全栈技能：前后端学习与项目实战的综合指南]]></title>
+        <id>https://copa.us.kg/post/前端学习/</id>
+        <link href="https://copa.us.kg/post/前端学习/">
+        </link>
+        <updated>2024-04-04T04:13:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>在当今的软件开发世界中，成为一名全栈开发者意味着你需要掌握从前端到后端的一系列技能。不仅需要了解如何构建用户界面，还要知道如何在服务器上处理数据和逻辑。本文将为你提供一个全面的指南，帮助你从基础概念开始，通过实际项目来深化你的前后端开发技能。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在当今的软件开发世界中，成为一名全栈开发者意味着你需要掌握从前端到后端的一系列技能。不仅需要了解如何构建用户界面，还要知道如何在服务器上处理数据和逻辑。本文将为你提供一个全面的指南，帮助你从基础概念开始，通过实际项目来深化你的前后端开发技能。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ 前端学习及项目实战：从零到精通的探索之旅]]></title>
+        <id>https://copa.us.kg/post/bian-cheng-xue-xi/</id>
+        <link href="https://copa.us.kg/post/bian-cheng-xue-xi/">
+        </link>
+        <updated>2024-04-04T03:59:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>在当今互联网科技快速发展的时代，前端技术已经成为构建网站和移动应用的重要基础之一。作为想要进入前端领域的初学者，掌握前端技能并在实际项目中进行实践是至关重要的。本文将为您呈现一条从前端基础知识到项目实战的学习之路。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在当今互联网科技快速发展的时代，前端技术已经成为构建网站和移动应用的重要基础之一。作为想要进入前端领域的初学者，掌握前端技能并在实际项目中进行实践是至关重要的。本文将为您呈现一条从前端基础知识到项目实战的学习之路。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端学习：掌握互联网的视觉艺术]]></title>
+        <id>https://copa.us.kg/post/qian-duan-xue-xi-zhang-wo-hu-lian-wang-de-shi-jue-yi-zhu/</id>
+        <link href="https://copa.us.kg/post/qian-duan-xue-xi-zhang-wo-hu-lian-wang-de-shi-jue-yi-zhu/">
+        </link>
+        <updated>2024-04-04T03:49:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>随着信息技术的发展，网页和应用程序已成为我们生活中不可或缺的一部分。而构建这些界面的关键，就是前端技术。那么，什么是前端呢？简单来说，前端是一个网站或应用的用户界面部分，它负责将信息以视觉的形式呈现给用户。因此，前端开发也被称为“客户端开发”，它是任何Web或移动应用的基础。<br>
+前端学习，不仅仅是为了掌握技术，更是为了理解如何通过代码创造美观、直观且用户友好的界面。接下来，我们将深入了解前端的核心组成，以及如何开始你的前端学习之旅。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>随着信息技术的发展，网页和应用程序已成为我们生活中不可或缺的一部分。而构建这些界面的关键，就是前端技术。那么，什么是前端呢？简单来说，前端是一个网站或应用的用户界面部分，它负责将信息以视觉的形式呈现给用户。因此，前端开发也被称为“客户端开发”，它是任何Web或移动应用的基础。<br>
+前端学习，不仅仅是为了掌握技术，更是为了理解如何通过代码创造美观、直观且用户友好的界面。接下来，我们将深入了解前端的核心组成，以及如何开始你的前端学习之旅。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端学习：从零基础到专业开发者]]></title>
+        <id>https://copa.us.kg/post/qian-duan-xue-xi-cong-ling-ji-chu-dao-zhuan-ye-kai-fa-zhe/</id>
+        <link href="https://copa.us.kg/post/qian-duan-xue-xi-cong-ling-ji-chu-dao-zhuan-ye-kai-fa-zhe/">
+        </link>
+        <updated>2024-04-04T03:46:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>在数字化时代，互联网技术的飞速发展，使得前端开发成为了一个热门的职业方向。无论是想要转行的个人，还是即将毕业的学生，都希望通过学习前端技术，成为一名专业的前端开发者。那么，如何从零基础开始学习前端技术呢？本文将为您详细解析前端学习的全过程。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在数字化时代，互联网技术的飞速发展，使得前端开发成为了一个热门的职业方向。无论是想要转行的个人，还是即将毕业的学生，都希望通过学习前端技术，成为一名专业的前端开发者。那么，如何从零基础开始学习前端技术呢？本文将为您详细解析前端学习的全过程。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[人工智能的崛起与应用]]></title>
+        <id>https://copa.us.kg/post/ren-gong-zhi-neng-de-jue-qi-yu-ying-yong/</id>
+        <link href="https://copa.us.kg/post/ren-gong-zhi-neng-de-jue-qi-yu-ying-yong/">
+        </link>
+        <updated>2024-04-04T03:08:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>在科技飞速发展的今天，我们生活在一个信息爆炸的时代，各种新技术层出不穷，而人工智能无疑是其中最为引人注目的一种。人工智能（Artificial Intelligence，AI）是指由人制造出来的系统所表现出来的智能，这种智能能够理解、学习、适应并执行任务。人工智能的发展已经渗透到我们生活的各个角落，无论是智能手机、自动驾驶汽车，还是智能家居设备，都离不开人工智能的支持。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在科技飞速发展的今天，我们生活在一个信息爆炸的时代，各种新技术层出不穷，而人工智能无疑是其中最为引人注目的一种。人工智能（Artificial Intelligence，AI）是指由人制造出来的系统所表现出来的智能，这种智能能够理解、学习、适应并执行任务。人工智能的发展已经渗透到我们生活的各个角落，无论是智能手机、自动驾驶汽车，还是智能家居设备，都离不开人工智能的支持。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数字中国🇨🇳建设全解析：前沿热点+实践应用]]></title>
+        <id>https://copa.us.kg/post/shu-zi-zhong-guo-jian-she-quan-jie-xi-qian-yan-re-dian-shi-jian-ying-yong/</id>
+        <link href="https://copa.us.kg/post/shu-zi-zhong-guo-jian-she-quan-jie-xi-qian-yan-re-dian-shi-jian-ying-yong/">
+        </link>
+        <updated>2024-04-04T02:52:13.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 Blogger 建立一个博客]]></title>
+        <id>https://copa.us.kg/post/zai-blogger-jian-li-yi-ge-bo-ke/</id>
+        <link href="https://copa.us.kg/post/zai-blogger-jian-li-yi-ge-bo-ke/">
+        </link>
+        <updated>2024-03-31T03:26:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>在Blogger上建立一个博客的步骤如下：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在Blogger上建立一个博客的步骤如下：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于本站]]></title>
+        <id>https://copa.us.kg/post/about/</id>
+        <link href="https://copa.us.kg/post/about/">
+        </link>
+        <updated>2024-03-30T06:21:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>网站站名：codepark<br>
+博客网址：https://copa.pages.dev https://copa.dev.tc https://copa.app.tc<br>
+博客简介：CodePark，记录菜鸟成长与实用教程。<br>
+上线时间：2024年03月30日<br>
+站长名字：Hazel<br>
+联系邮箱：x813942117(at)foxmail.com<br>
+如何找到本站<br>
+记不住本站域名的朋友，您可以收藏本站方便以后访问！<br>
+您也可以使用必应等搜索引擎，搜索“codepark”，即可找到本站！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>网站站名：codepark<br>
+博客网址：https://copa.pages.dev https://copa.dev.tc https://copa.app.tc<br>
+博客简介：CodePark，记录菜鸟成长与实用教程。<br>
+上线时间：2024年03月30日<br>
+站长名字：Hazel<br>
+联系邮箱：x813942117(at)foxmail.com<br>
+如何找到本站<br>
+记不住本站域名的朋友，您可以收藏本站方便以后访问！<br>
+您也可以使用必应等搜索引擎，搜索“codepark”，即可找到本站！</p>
+]]></content>
+    </entry>
+</feed>
